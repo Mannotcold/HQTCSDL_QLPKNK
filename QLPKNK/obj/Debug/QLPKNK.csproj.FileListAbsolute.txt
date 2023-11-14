@@ -1,0 +1,12 @@
+E:\HQTCSDL\New folder (2)\QLPKNK\bin\Debug\QLPKNK.exe.config
+E:\HQTCSDL\New folder (2)\QLPKNK\bin\Debug\QLPKNK.exe
+E:\HQTCSDL\New folder (2)\QLPKNK\bin\Debug\QLPKNK.pdb
+E:\HQTCSDL\New folder (2)\QLPKNK\obj\Debug\QLPKNK.csproj.AssemblyReference.cache
+E:\HQTCSDL\New folder (2)\QLPKNK\obj\Debug\QLPKNK.Properties.Resources.resources
+E:\HQTCSDL\New folder (2)\QLPKNK\obj\Debug\QLPKNK.csproj.GenerateResource.cache
+E:\HQTCSDL\New folder (2)\QLPKNK\obj\Debug\QLPKNK.csproj.CoreCompileInputs.cache
+E:\HQTCSDL\New folder (2)\QLPKNK\obj\Debug\QLPKNK.exe
+E:\HQTCSDL\New folder (2)\QLPKNK\obj\Debug\QLPKNK.pdb
+E:\HQTCSDL\New folder (2)\QLPKNK\obj\Debug\QLPKNK.DangNhap.resources
+E:\HQTCSDL\New folder (2)\QLPKNK\bin\Debug\Guna.UI2.dll
+E:\HQTCSDL\New folder (2)\QLPKNK\obj\Debug\QLPKNK.csproj.CopyComplete
