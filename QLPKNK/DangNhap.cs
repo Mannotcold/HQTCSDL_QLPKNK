@@ -135,11 +135,44 @@ namespace QLPKNK
 
 
             // kết nối với database tương ứng với loại acc
-
-
-
-            // kết nối với database tương ứng với loại acc
             Functions.Connect(Functions.get_ConnectString(user_type));
+            open_FormMain(user_type);
+        }
+
+
+        // xử lí mở form tương ứng từng loại acc      
+        public void open_FormMain(object obj)
+        {
+            switch (user_type)
+            {
+                case 0:
+                    {
+                       
+                        break;
+                    }
+                case 1:
+                    {
+                        Form Menu = new MenuBacSi(txtBox_tendangnhap.Text);
+                        this.Hide();
+                        Menu.ShowDialog();
+                        this.Close();
+                        break;
+                    }
+                case 2:
+                    {
+                        break;
+                    }
+                
+            }
+        }
+
+        private void btndangky_Click(object sender, EventArgs e)
+        {
+            Form form = new DangKy();
+
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
         }
     }
 }

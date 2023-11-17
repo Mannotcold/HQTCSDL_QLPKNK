@@ -16,5 +16,14 @@ namespace QLPKNK
         {
             InitializeComponent();
         }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            Form form = new DangNhap();
+
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
+        }
     }
 }

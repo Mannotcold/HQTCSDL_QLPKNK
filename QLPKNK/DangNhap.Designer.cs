@@ -35,7 +35,7 @@ namespace QLPKNK
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtBox_matkhau = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btndangky = new Guna.UI2.WinForms.Guna2Button();
             this.btndangnhap = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@ namespace QLPKNK
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
             this.guna2Panel2.Controls.Add(this.txtBox_matkhau);
-            this.guna2Panel2.Controls.Add(this.guna2Button2);
+            this.guna2Panel2.Controls.Add(this.btndangky);
             this.guna2Panel2.Controls.Add(this.btndangnhap);
             this.guna2Panel2.Controls.Add(this.label2);
             this.guna2Panel2.Controls.Add(this.label1);
@@ -95,23 +95,24 @@ namespace QLPKNK
             this.txtBox_matkhau.Size = new System.Drawing.Size(251, 36);
             this.txtBox_matkhau.TabIndex = 8;
             // 
-            // guna2Button2
+            // btndangky
             // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(20)))), ((int)(((byte)(137)))));
-            this.guna2Button2.BorderRadius = 10;
-            this.guna2Button2.BorderThickness = 2;
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2Button2.Location = new System.Drawing.Point(187, 436);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(98, 39);
-            this.guna2Button2.TabIndex = 7;
-            this.guna2Button2.Text = "Sign up";
-            this.guna2Button2.UseTransparentBackground = true;
+            this.btndangky.Animated = true;
+            this.btndangky.BackColor = System.Drawing.Color.Transparent;
+            this.btndangky.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(20)))), ((int)(((byte)(137)))));
+            this.btndangky.BorderRadius = 10;
+            this.btndangky.BorderThickness = 2;
+            this.btndangky.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.btndangky.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btndangky.ForeColor = System.Drawing.Color.White;
+            this.btndangky.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btndangky.Location = new System.Drawing.Point(187, 436);
+            this.btndangky.Name = "btndangky";
+            this.btndangky.Size = new System.Drawing.Size(98, 39);
+            this.btndangky.TabIndex = 7;
+            this.btndangky.Text = "Sign up";
+            this.btndangky.UseTransparentBackground = true;
+            this.btndangky.Click += new System.EventHandler(this.btndangky_Click);
             // 
             // btndangnhap
             // 
@@ -215,7 +216,7 @@ namespace QLPKNK
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.InitialImage")));
-            this.guna2PictureBox2.Location = new System.Drawing.Point(-73, 0);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(-68, -34);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(835, 701);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -250,7 +251,7 @@ namespace QLPKNK
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btndangky;
         private Guna.UI2.WinForms.Guna2Button btndangnhap;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

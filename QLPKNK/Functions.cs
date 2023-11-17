@@ -65,7 +65,7 @@ namespace QLPKNK
                 case -2:
                     {
                         
-                        s = "Data Source=.;Initial Catalog=QLTC;Integrated Security=True";
+                        
                         break;
                     }
                 // admin
@@ -75,10 +75,10 @@ namespace QLPKNK
                         
                         break;
                     }
-                // khách hàng
+                // Bac si
                 case 1:
                     {
-                        s = @"Data Source=" + exactly_server_name + ";Initial Catalog=QL_DH_GH;Persist Security Info=True;User ID=QL_DH_GH_KHACHHANG;Password=12345";
+                        s = "Data Source=.;Initial Catalog=DOANHQT;User ID=QLPKNK_NhaSi;Password=12345";
                         break;
                     }
                

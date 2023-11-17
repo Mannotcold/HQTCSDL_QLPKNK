@@ -10,3 +10,18 @@ E:\HQTCSDL\New folder (2)\QLPKNK\obj\Debug\QLPKNK.pdb
 E:\HQTCSDL\New folder (2)\QLPKNK\obj\Debug\QLPKNK.DangNhap.resources
 E:\HQTCSDL\New folder (2)\QLPKNK\bin\Debug\Guna.UI2.dll
 E:\HQTCSDL\New folder (2)\QLPKNK\obj\Debug\QLPKNK.csproj.CopyComplete
+E:\HQTCSDL\DAHQTCSDL\QLPKNK\bin\Debug\QLPKNK.exe.config
+E:\HQTCSDL\DAHQTCSDL\QLPKNK\bin\Debug\QLPKNK.exe
+E:\HQTCSDL\DAHQTCSDL\QLPKNK\bin\Debug\QLPKNK.pdb
+E:\HQTCSDL\DAHQTCSDL\QLPKNK\bin\Debug\Guna.UI2.dll
+E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.csproj.AssemblyReference.cache
+E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.DangKy.resources
+E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.DangNhap.resources
+E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.Properties.Resources.resources
+E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.ThongtinUser.resources
+E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.csproj.GenerateResource.cache
+E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.csproj.CoreCompileInputs.cache
+E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.csproj.CopyComplete
+E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.exe
+E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.pdb
+E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.MenuBacSi.resources

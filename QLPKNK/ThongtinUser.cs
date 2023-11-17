@@ -10,11 +10,15 @@ using System.Windows.Forms;
 
 namespace QLPKNK
 {
-    public partial class Thongtincanhan : Form
+    public partial class ThongtinUser : Form
     {
-        public Thongtincanhan()
+        string SĐT;
+        public ThongtinUser(string sdt)
         {
             InitializeComponent();
+            SĐT = sdt;
         }
+
+
     }
 }
