@@ -61,7 +61,7 @@ namespace QLPKNK
             string s = "";
             switch (type)
             {
-                // vô danh
+                // TK bị khóa
                 case -2:
                     {
                         
@@ -81,7 +81,18 @@ namespace QLPKNK
                         s = "Data Source=.;Initial Catalog=DOANHQT;User ID=QLPKNK_NhaSi;Password=12345";
                         break;
                     }
-               
+                    // Nhân viên
+                case 2:
+                    {
+                        //s = "Data Source=.;Initial Catalog=DOANHQT;User ID=QLPKNK_NhaSi;Password=12345";
+                        break;
+                    }
+                    //Bệnh nhân
+                case 3:
+                    {
+                        //s = "Data Source=.;Initial Catalog=DOANHQT;User ID=QLPKNK_NhaSi;Password=12345";
+                        break;
+                    }
             }
             return s;
         }
@@ -124,10 +135,11 @@ namespace QLPKNK
             try
             {
                 cmd.ExecuteNonQuery();
+                MessageBox.Show("Thực hiện thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Thực hiện không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             //Giải phóng bộ nhớ

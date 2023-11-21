@@ -26,6 +26,8 @@ CREATE TABLE HoSoBN
   PRIMARY KEY(MaHS)
 );
 
+select * from HoSoBN
+
 CREATE TABLE Thuoc
 (
   MaThuoc       CHAR(5) NOT NULL,

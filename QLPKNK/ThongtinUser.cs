@@ -67,7 +67,7 @@ namespace QLPKNK
                     {
 
                         Functions.RunSQL("Update TAIKHOAN set MatKhau = '" + txtNewPassword.Text.ToString() + "' where SDTNS = N'" + SĐT + "'");
-                        MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        
 
                     }
                     catch (Exception)
