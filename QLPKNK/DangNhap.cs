@@ -19,7 +19,7 @@ namespace QLPKNK
             InitializeComponent();
         }
 
-        public int user_type = -2;
+        public int user_type = -1;
         string LoaiTK = null;
         string tendangnhap;
         string matkhau;
