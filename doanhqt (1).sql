@@ -162,6 +162,10 @@ INSERT INTO TaiKhoan (SDT, MatKhau, LoaiTK) VALUES
 (987654321, '12345', '1'),
 (555555555, '12345', '2');
 
+select * from TaiKhoan
+insert into TAIKHOAN(SDT,MATKHAU,LoaiTK) VALUES (125423344, '12345', '0')
+
+
 INSERT INTO QuanTri (MaQT, HoTenQT, NgaySinhQT, DiaChiQT, SDTQT, EmailQT) VALUES
 ('QT001', 'Nguyenhoaiman', '1-1-1999', 'hcm', 123456789, 'MAN2082002@GMAIL.COM');
 
