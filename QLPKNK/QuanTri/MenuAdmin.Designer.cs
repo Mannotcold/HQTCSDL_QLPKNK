@@ -1,7 +1,7 @@
 ﻿
 namespace QLPKNK.QuanTri
 {
-    partial class FormAdmin
+    partial class MenuAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,216 @@ namespace QLPKNK.QuanTri
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuAdmin));
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnStatistic = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnAccount = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lb_tenadmin_AD = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.guna2Panel1.Location = new System.Drawing.Point(177, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(975, 772);
+            this.guna2Panel1.TabIndex = 34;
+            // 
+            // btnStatistic
+            // 
+            this.btnStatistic.Animated = true;
+            this.btnStatistic.BackColor = System.Drawing.Color.Transparent;
+            this.btnStatistic.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnStatistic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStatistic.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStatistic.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnStatistic.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnStatistic.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnStatistic.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnStatistic.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnStatistic.FillColor = System.Drawing.Color.Empty;
+            this.btnStatistic.FillColor2 = System.Drawing.Color.Empty;
+            this.btnStatistic.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnStatistic.ForeColor = System.Drawing.Color.White;
+            this.btnStatistic.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
+            this.btnStatistic.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
+            this.btnStatistic.Image = ((System.Drawing.Image)(resources.GetObject("btnStatistic.Image")));
+            this.btnStatistic.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStatistic.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnStatistic.Location = new System.Drawing.Point(3, 146);
+            this.btnStatistic.Name = "btnStatistic";
+            this.btnStatistic.Size = new System.Drawing.Size(178, 45);
+            this.btnStatistic.TabIndex = 9;
+            this.btnStatistic.Text = "Thêm phiếu";
+            this.btnStatistic.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStatistic.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnStatistic.UseTransparentBackground = true;
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.FillColor = System.Drawing.Color.Gray;
+            this.guna2Separator1.Location = new System.Drawing.Point(-3, 318);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(200, 10);
+            this.guna2Separator1.TabIndex = 3;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Animated = true;
+            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogout.FillColor = System.Drawing.Color.Empty;
+            this.btnLogout.FillColor2 = System.Drawing.Color.Empty;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
+            this.btnLogout.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnLogout.Location = new System.Drawing.Point(0, 727);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(183, 45);
+            this.btnLogout.TabIndex = 8;
+            this.btnLogout.Text = "Đăng xuất";
+            this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnLogout.UseTransparentBackground = true;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
+            this.guna2Panel2.Controls.Add(this.guna2Separator2);
+            this.guna2Panel2.Controls.Add(this.pictureBox1);
+            this.guna2Panel2.Controls.Add(this.lb_tenadmin_AD);
+            this.guna2Panel2.Controls.Add(this.panel1);
+            this.guna2Panel2.Controls.Add(this.btnStatistic);
+            this.guna2Panel2.Controls.Add(this.guna2Separator1);
+            this.guna2Panel2.Controls.Add(this.btnLogout);
+            this.guna2Panel2.Controls.Add(this.btnAccount);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(183, 772);
+            this.guna2Panel2.TabIndex = 35;
+            // 
+            // btnAccount
+            // 
+            this.btnAccount.Animated = true;
+            this.btnAccount.BackColor = System.Drawing.Color.Transparent;
+            this.btnAccount.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnAccount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAccount.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAccount.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAccount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAccount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAccount.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAccount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAccount.FillColor = System.Drawing.Color.Empty;
+            this.btnAccount.FillColor2 = System.Drawing.Color.Empty;
+            this.btnAccount.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnAccount.ForeColor = System.Drawing.Color.White;
+            this.btnAccount.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
+            this.btnAccount.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
+            this.btnAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAccount.Image")));
+            this.btnAccount.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAccount.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnAccount.Location = new System.Drawing.Point(3, 267);
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.Size = new System.Drawing.Size(194, 45);
+            this.btnAccount.TabIndex = 7;
+            this.btnAccount.Text = "Tài khoản";
+            this.btnAccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAccount.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnAccount.UseTransparentBackground = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.ForeColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(0, 725);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(183, 2);
+            this.panel1.TabIndex = 10;
+            // 
+            // lb_tenadmin_AD
+            // 
+            this.lb_tenadmin_AD.AutoSize = true;
+            this.lb_tenadmin_AD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lb_tenadmin_AD.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lb_tenadmin_AD.Location = new System.Drawing.Point(59, 99);
+            this.lb_tenadmin_AD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_tenadmin_AD.Name = "lb_tenadmin_AD";
+            this.lb_tenadmin_AD.Size = new System.Drawing.Size(54, 20);
+            this.lb_tenadmin_AD.TabIndex = 11;
+            this.lb_tenadmin_AD.Text = "Admin";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(53, 25);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // guna2Separator2
+            // 
+            this.guna2Separator2.FillColor = System.Drawing.Color.Gray;
+            this.guna2Separator2.Location = new System.Drawing.Point(-3, 130);
+            this.guna2Separator2.Name = "guna2Separator2";
+            this.guna2Separator2.Size = new System.Drawing.Size(200, 10);
+            this.guna2Separator2.TabIndex = 13;
+            // 
+            // MenuAdmin
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1154, 772);
+            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.guna2Panel2);
+            this.Name = "MenuAdmin";
             this.Text = "FormAdmin";
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnStatistic;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnLogout;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lb_tenadmin_AD;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnAccount;
     }
 }

@@ -33,6 +33,8 @@ namespace QLPKNK
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvHSBA = new System.Windows.Forms.DataGridView();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtmans = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnsuathu = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtTuKhoa = new Guna.UI2.WinForms.Guna2TextBox();
@@ -51,8 +53,6 @@ namespace QLPKNK
             this.label14 = new System.Windows.Forms.Label();
             this.txtNguoiKham = new Guna.UI2.WinForms.Guna2TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.txtmans = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHSBA)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -93,6 +93,7 @@ namespace QLPKNK
             this.dgvHSBA.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHSBA.Size = new System.Drawing.Size(1124, 382);
             this.dgvHSBA.TabIndex = 11;
+            this.dgvHSBA.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHSBA_CellContentClick);
             // 
             // guna2Panel3
             // 
@@ -119,6 +120,44 @@ namespace QLPKNK
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(1124, 311);
             this.guna2Panel3.TabIndex = 36;
+            // 
+            // txtmans
+            // 
+            this.txtmans.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtmans.Animated = true;
+            this.txtmans.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(153)))), ((int)(((byte)(149)))));
+            this.txtmans.BorderRadius = 6;
+            this.txtmans.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtmans.DefaultText = "";
+            this.txtmans.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtmans.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtmans.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtmans.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtmans.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.txtmans.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtmans.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtmans.ForeColor = System.Drawing.Color.White;
+            this.txtmans.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtmans.Location = new System.Drawing.Point(42, 66);
+            this.txtmans.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtmans.Name = "txtmans";
+            this.txtmans.PasswordChar = '\0';
+            this.txtmans.PlaceholderText = "";
+            this.txtmans.SelectedText = "";
+            this.txtmans.Size = new System.Drawing.Size(111, 36);
+            this.txtmans.TabIndex = 43;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(39, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 21);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Mã nha sĩ:";
             // 
             // btnsuathu
             // 
@@ -458,44 +497,6 @@ namespace QLPKNK
             this.label16.Size = new System.Drawing.Size(100, 21);
             this.label16.TabIndex = 0;
             this.label16.Text = "Người khám:";
-            // 
-            // txtmans
-            // 
-            this.txtmans.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtmans.Animated = true;
-            this.txtmans.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(153)))), ((int)(((byte)(149)))));
-            this.txtmans.BorderRadius = 6;
-            this.txtmans.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtmans.DefaultText = "";
-            this.txtmans.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtmans.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtmans.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtmans.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtmans.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.txtmans.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtmans.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtmans.ForeColor = System.Drawing.Color.White;
-            this.txtmans.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtmans.Location = new System.Drawing.Point(42, 66);
-            this.txtmans.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtmans.Name = "txtmans";
-            this.txtmans.PasswordChar = '\0';
-            this.txtmans.PlaceholderText = "";
-            this.txtmans.SelectedText = "";
-            this.txtmans.Size = new System.Drawing.Size(111, 36);
-            this.txtmans.TabIndex = 43;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(39, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 21);
-            this.label1.TabIndex = 42;
-            this.label1.Text = "Mã nha sĩ:";
             // 
             // QLHoSoBN
             // 

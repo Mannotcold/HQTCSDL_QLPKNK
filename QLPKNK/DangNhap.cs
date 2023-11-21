@@ -135,7 +135,7 @@ namespace QLPKNK
 
 
             // kết nối với database tương ứng với loại acc
-            Functions.Connect(Functions.get_ConnectString(user_type));
+            Functions.Connect(Functions.get_ConnectString(tendangnhap, matkhau));
             open_FormMain(user_type);
         }
 

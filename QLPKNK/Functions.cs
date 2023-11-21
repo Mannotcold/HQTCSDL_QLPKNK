@@ -56,44 +56,10 @@ namespace QLPKNK
         }
 
         // lấy ConnectString với mỗi loại user
-        public static string get_ConnectString(int type)
+        public static string get_ConnectString(string tendangnhap, string matkhau)
         {
             string s = "";
-            switch (type)
-            {
-                // TK bị khóa
-                case -2:
-                    {
-                        
-                        
-                        break;
-                    }
-                // admin
-                case 0:
-                    {
-                        s = "Data Source=.;Initial Catalog=DOANHQT;User ID=QLPKNK_QUANTRI;Password=12345";
-                        
-                        break;
-                    }
-                // Bac si
-                case 1:
-                    {
-                        s = "Data Source=.;Initial Catalog=DOANHQT;User ID=QLPKNK_NhaSi;Password=12345";
-                        break;
-                    }
-                    // Nhân viên
-                case 2:
-                    {
-                        //s = "Data Source=.;Initial Catalog=DOANHQT;User ID=QLPKNK_NhaSi;Password=12345";
-                        break;
-                    }
-                    //Bệnh nhân
-                case 3:
-                    {
-                        //s = "Data Source=.;Initial Catalog=DOANHQT;User ID=QLPKNK_NhaSi;Password=12345";
-                        break;
-                    }
-            }
+            s = "Data Source=.;Initial Catalog=DOANHQT;User ID=" + tendangnhap + ";Password=" + matkhau + "";
             return s;
         }
 

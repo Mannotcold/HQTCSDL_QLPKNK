@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLPKNK.QuanTri
 {
-    public partial class FormAdmin : Form
+    public partial class MenuAdmin : Form
     {
-        public FormAdmin()
+        public MenuAdmin()
         {
             InitializeComponent();
         }

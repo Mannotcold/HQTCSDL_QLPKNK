@@ -26,5 +26,10 @@ namespace QLPKNK
             dgvHSBA.DataSource = TT_HSBA;
             
         }
+
+        private void dgvHSBA_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

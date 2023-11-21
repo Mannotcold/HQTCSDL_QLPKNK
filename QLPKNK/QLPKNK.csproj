@@ -52,10 +52,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddHoSoBN.cs">
+    <Compile Include="BacSi\AddHoSoBN.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddHoSoBN.Designer.cs">
+    <Compile Include="BacSi\AddHoSoBN.Designer.cs">
       <DependentUpon>AddHoSoBN.cs</DependentUpon>
     </Compile>
     <Compile Include="DangKy.cs">
@@ -85,13 +85,43 @@
     <Compile Include="BacSi\QLHoSoBN.Designer.cs">
       <DependentUpon>QLHoSoBN.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThongtinUser.cs">
+    <Compile Include="QuanTri\AddTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThongtinUser.Designer.cs">
+    <Compile Include="QuanTri\AddTaiKhoan.Designer.cs">
+      <DependentUpon>AddTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\CapQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanTri\CapQuyen.Designer.cs">
+      <DependentUpon>CapQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\MenuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanTri\MenuAdmin.Designer.cs">
+      <DependentUpon>MenuAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\QuanLyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanTri\QuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BacSi\ThongtinUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BacSi\ThongtinUser.Designer.cs">
       <DependentUpon>ThongtinUser.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddHoSoBN.resx">
+    <Compile Include="QuanTri\ThongTinQuanTri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanTri\ThongTinQuanTri.Designer.cs">
+      <DependentUpon>ThongTinQuanTri.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BacSi\AddHoSoBN.resx">
       <DependentUpon>AddHoSoBN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DangKy.resx">
@@ -115,8 +145,23 @@
     <EmbeddedResource Include="BacSi\QLHoSoBN.resx">
       <DependentUpon>QLHoSoBN.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ThongtinUser.resx">
+    <EmbeddedResource Include="QuanTri\AddTaiKhoan.resx">
+      <DependentUpon>AddTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanTri\CapQuyen.resx">
+      <DependentUpon>CapQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanTri\MenuAdmin.resx">
+      <DependentUpon>MenuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanTri\QuanLyTaiKhoan.resx">
+      <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BacSi\ThongtinUser.resx">
       <DependentUpon>ThongtinUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanTri\ThongTinQuanTri.resx">
+      <DependentUpon>ThongTinQuanTri.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -131,6 +176,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BenhNhan\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
