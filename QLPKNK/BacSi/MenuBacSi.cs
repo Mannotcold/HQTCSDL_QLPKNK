@@ -57,5 +57,10 @@ namespace QLPKNK
         {
             openChildForm(new ThongtinUser(SĐT));
         }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            openChildForm(new AddHoSoBN());
+        }
     }
 }
