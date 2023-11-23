@@ -35,11 +35,11 @@ namespace QLPKNK.QuanTri
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.btnLogout = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnAccount = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lb_tenadmin_AD = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lb_tenadmin_AD = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAccount = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -84,6 +84,7 @@ namespace QLPKNK.QuanTri
             this.btnStatistic.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnStatistic.TextOffset = new System.Drawing.Point(10, 0);
             this.btnStatistic.UseTransparentBackground = true;
+            this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
             // 
             // guna2Separator1
             // 
@@ -140,6 +141,48 @@ namespace QLPKNK.QuanTri
             this.guna2Panel2.Size = new System.Drawing.Size(183, 772);
             this.guna2Panel2.TabIndex = 35;
             // 
+            // guna2Separator2
+            // 
+            this.guna2Separator2.FillColor = System.Drawing.Color.Gray;
+            this.guna2Separator2.Location = new System.Drawing.Point(-3, 130);
+            this.guna2Separator2.Name = "guna2Separator2";
+            this.guna2Separator2.Size = new System.Drawing.Size(200, 10);
+            this.guna2Separator2.TabIndex = 13;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(53, 25);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lb_tenadmin_AD
+            // 
+            this.lb_tenadmin_AD.AutoSize = true;
+            this.lb_tenadmin_AD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lb_tenadmin_AD.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lb_tenadmin_AD.Location = new System.Drawing.Point(59, 99);
+            this.lb_tenadmin_AD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_tenadmin_AD.Name = "lb_tenadmin_AD";
+            this.lb_tenadmin_AD.Size = new System.Drawing.Size(54, 20);
+            this.lb_tenadmin_AD.TabIndex = 11;
+            this.lb_tenadmin_AD.Text = "Admin";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.ForeColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(0, 725);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(183, 2);
+            this.panel1.TabIndex = 10;
+            // 
             // btnAccount
             // 
             this.btnAccount.Animated = true;
@@ -169,48 +212,6 @@ namespace QLPKNK.QuanTri
             this.btnAccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAccount.TextOffset = new System.Drawing.Point(10, 0);
             this.btnAccount.UseTransparentBackground = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(0, 725);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(183, 2);
-            this.panel1.TabIndex = 10;
-            // 
-            // lb_tenadmin_AD
-            // 
-            this.lb_tenadmin_AD.AutoSize = true;
-            this.lb_tenadmin_AD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lb_tenadmin_AD.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lb_tenadmin_AD.Location = new System.Drawing.Point(59, 99);
-            this.lb_tenadmin_AD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_tenadmin_AD.Name = "lb_tenadmin_AD";
-            this.lb_tenadmin_AD.Size = new System.Drawing.Size(54, 20);
-            this.lb_tenadmin_AD.TabIndex = 11;
-            this.lb_tenadmin_AD.Text = "Admin";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(53, 25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
-            // guna2Separator2
-            // 
-            this.guna2Separator2.FillColor = System.Drawing.Color.Gray;
-            this.guna2Separator2.Location = new System.Drawing.Point(-3, 130);
-            this.guna2Separator2.Name = "guna2Separator2";
-            this.guna2Separator2.Size = new System.Drawing.Size(200, 10);
-            this.guna2Separator2.TabIndex = 13;
             // 
             // MenuAdmin
             // 

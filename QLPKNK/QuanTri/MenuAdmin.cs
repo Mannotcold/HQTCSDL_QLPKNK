@@ -16,5 +16,10 @@ namespace QLPKNK.QuanTri
         {
             InitializeComponent();
         }
+
+        private void btnStatistic_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

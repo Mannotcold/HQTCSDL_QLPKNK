@@ -45,7 +45,6 @@ namespace QLPKNK
                     Functions.RunSQL("EXEC sp_addlogin " + username + " ,'" + password + "', 'DOANHQT' ");
                     Functions.RunSQL("CREATE USER [" + username + "] FOR LOGIN [" + username + "]");
                     Functions.RunSQL("EXEC sp_addrolemember 'BENHNHANROLE', [" + username + "];");
-                    MessageBox.Show("Đăng ký thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                 }
                 catch (Exception)

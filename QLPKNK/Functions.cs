@@ -89,28 +89,30 @@ namespace QLPKNK
 
         public static void RunSQL(string sql) // chạy câu lệnh sql
         {
-            SqlCommand cmd = new SqlCommand();
 
-            //Gán kết nối
-            cmd.Connection = connection;
-
-            //Gán lệnh SQL
-            cmd.CommandText = sql;
-
-            //Thực hiện câu lệnh SQL
-            try
+            SqlCommand com = new SqlCommand();
+            //Lấy dữ liệu về từ kết quả câu lệnh trên
+            //ExecuteReader() dùng với select
+            //ExecuteNonquery(); với inserrt update delete
+            //com.ExecuteNonQuery();
+            com.CommandType = CommandType.Text;
+            com.CommandText = sql;
+            com.Connection = connection;
+            //loaddata_PhieuThu();
+            int kq = com.ExecuteNonQuery();
+            if (kq > 0)
             {
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Thực hiện thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Thực hiện thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Thực hiện không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Thực hiện không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
+
 
             //Giải phóng bộ nhớ
-            cmd.Dispose();
-            cmd = null;
+            com.Dispose();
+            com = null;
         }
         public static void FillCombo(string sql, ComboBox cbo, string ma, string ten) // đổ dữ liệu vào comboBox
         {

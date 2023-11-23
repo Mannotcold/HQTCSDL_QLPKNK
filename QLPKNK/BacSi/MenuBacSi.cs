@@ -26,20 +26,25 @@ namespace QLPKNK
         private void openChildForm(Form childForm)
         {
             if (activeform != null)
+            {
                 activeform.Close();
+            }
+
             activeform = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            guna2Panel1.Controls.Add(childForm);
-            guna2Panel1.Tag = childForm;
+
+            guna2Panel3.Controls.Clear(); // Xóa tất cả các controls hiện tại trong panel trước khi thêm form con mới
+            guna2Panel3.Controls.Add(childForm);
+            guna2Panel3.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
 
         private void MenuBacSi_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnStatistic_Click(object sender, EventArgs e)
