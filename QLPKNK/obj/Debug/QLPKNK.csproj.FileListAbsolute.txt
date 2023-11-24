@@ -32,3 +32,4 @@ E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.QuanTri.MenuAdmin.resources
 E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.QuanTri.QuanLyTaiKhoan.resources
 E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.QuanTri.ThongTinQuanTri.resources
 E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.QuanTri.CapQuyen.resources
+E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.BacSi.QLLichHen.resources

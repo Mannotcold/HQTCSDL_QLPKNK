@@ -62,7 +62,7 @@ namespace QLPKNK
         DataTable TT_CTHD;
         private void AddHoSoBN_Load(object sender, EventArgs e)
         {
-            string sql = "SELECT MaDV_Thuoc, TenDV, TenThuoc, LoaiDV, ThanhTien, MaHD, MaHS FROM CT_HoaDon; ";
+            string sql = "SELECT MaDV_Thuoc, TenDV, TenThuoc, LoaiDV, ThanhTien, MaHD, MaHS FROM CT_HoaDon  ";
             TT_CTHD = Functions.GetDataToTable(sql);
             guna2DataGridView2.DataSource = TT_CTHD;
         }

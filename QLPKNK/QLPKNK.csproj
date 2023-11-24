@@ -58,6 +58,12 @@
     <Compile Include="BacSi\AddHoSoBN.Designer.cs">
       <DependentUpon>AddHoSoBN.cs</DependentUpon>
     </Compile>
+    <Compile Include="BacSi\QLLichHen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BacSi\QLLichHen.Designer.cs">
+      <DependentUpon>QLLichHen.cs</DependentUpon>
+    </Compile>
     <Compile Include="DangKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </Compile>
     <EmbeddedResource Include="BacSi\AddHoSoBN.resx">
       <DependentUpon>AddHoSoBN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BacSi\QLLichHen.resx">
+      <DependentUpon>QLLichHen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DangKy.resx">
       <DependentUpon>DangKy.cs</DependentUpon>
