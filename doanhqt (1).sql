@@ -1,4 +1,4 @@
-﻿--DROP DATABASE DOANHQT
+﻿DROP DATABASE DOANHQT
 
 -- Drop foreign key constraints
 ALTER TABLE KHACHHANG DROP CONSTRAINT FK_KHACHHANG_TAIKHOAN;
@@ -38,6 +38,7 @@ DROP TABLE DichVu;
 DROP TABLE HoSoBN;
 DROP TABLE KHACHHANG;
 DROP TABLE Thuoc;
+drop table taikhoan
 
 
 CREATE DATABASE DOANHQT
@@ -197,63 +198,43 @@ ALTER TABLE QUANTRI ADD CONSTRAINT FK_QUANTRI_TAIKHOAN FOREIGN KEY(SDTQT) REFERE
 
 
 INSERT INTO TaiKhoan (SDT, MatKhau, LoaiTK) VALUES
-(01265015235, '12345', '1'),
-(123456789, '12345', '0'),
-(987654321, '12345', '1'),
-(555555555, '12345', '2'),
-(123123123, '12345', '2'),
-(234234234, '12345', '0'),
-(345345345, '12345', '1'),
-(456456456, '12345', '2'),
-(567567567, '12345', '0'),
-(678678678, '12345', '1'),
-(789789789, '12345', '2'),
-(989898989, '12345', '0'),
-(878787878, '12345', '1'),
-(767676767, '12345', '2'),
-(656565656, '12345', '0'),
-(121212121, '12345', '1'),
-(232323232, '12345', '2'),
-(343434343, '12345', '3'),
-(454545454, '12345', '3'),
-(565656565, '12345', '3'),
-(676767676, '12345', '3'),
-(787878787, '12345', '3');
+(012650152, '12345', '0'),
+(123456789, '12345', '1'),
+(123456788, '12345', '1'),
+(123456787, '12345', '1'),
+(987654321, '12345', '2'),
+(987654322, '12345', '2'),
+(987654323, '12345', '2'),
+(555555551, '12345', '3'),
+(555555552, '12345', '3'),
+(555555553, '12345', '3')
+
 select * from TaiKhoan
 
-insert into TAIKHOAN(SDT,MATKHAU,LoaiTK) VALUES (125423344, '12345', '0')
-
 INSERT INTO QuanTri (HoTenQT, NgaySinhQT, DiaChiQT, SDTQT, EmailQT) VALUES
-('Nguyenhoaiman', '1-1-1999', 'hcm', 123456789, 'MAN2082002@GMAIL.COM'),
-('Khanh', '12-21-2002', 'HCM', 234234234, 'khanh2002@gmail.com'),
-('Hoang', '1-1-2002', 'DaNang', 567567567, 'hoang2002@gmail.com'),
-('Danh', '2-2-2002', 'HoChiMinh', 989898989, 'danh2002@gmail.com'),
-('HoangThiD', '03-18-1995', 'Hue', 656565656, 'hoangthid@gmail.com');
+('Nguyenhoaiman', '1-1-1999', 'hcm', 012650152, 'MAN2082002@GMAIL.COM')
+
 select * from QuanTri
 
 INSERT INTO NhanVien (HoTenNV, NgaySinhNV, DiaChiNV, SDTNV, EmailNV) VALUES
-( 'Nguyen Van A', '05-15-1990', 'Ha Noi', 789789789, 'nva@gmail.com'),
-( 'Tran Thi B', '12-10-1985', 'Da Nang', 345345345, 'ttb@gmail.com'),
-( 'Le Van C', '07-22-1982', 'Ho Chi Minh', 678678678, 'lvc@gmail.com'),
-( 'Hoang Van D', '03-18-1995', 'Hue', 878787878, 'hvd@gmail.com'),
-( 'Pham Thi E', '09-05-1988', 'Can Tho', 121212121, 'pte@gmail.com');
+( 'Nguyen Van A', '05-15-1990', 'Ha Noi', 987654321, 'nva@gmail.com'),
+( 'Tran Thi B', '12-10-1985', 'Da Nang', 987654322, 'ttb@gmail.com'),
+( 'Le Van C', '07-22-1982', 'Ho Chi Minh', 987654323, 'lvc@gmail.com')
+
 select * from NhanVien
 
 INSERT INTO NhaSi (HoTenNS, NgaySinhNS, DiaChiNS, SDTNS, EmailNS) VALUES
-('Tran Van A', '05-15-1990', 'Ha Noi', 987654321, 'tva@gmail.com'),
-('Le Thi B', '12-10-1985', 'Da Nang', 555555555, 'ltb@gmail.com'),
-('Nguyen Van C', '07-22-1982', 'Ho Chi Minh', 456456456, 'nvc@gmail.com'),
-('Pham Van D', '03-18-1995', 'Hue', 789789789, 'pvd@gmail.com'),
-('Nguyen Thi E', '09-05-1988', 'Can Tho', 767676767, 'nte@gmail.com'),
-('Tran Thi T', '09-12-1998', 'Ben Tre', 232323232, 'ttt@gmail.com');
+('Tran Van A', '05-15-1990', 'Ha Noi', 123456789, 'tva@gmail.com'),
+('Le Thi B', '12-10-1985', 'Da Nang', 123456788, 'ltb@gmail.com'),
+('Nguyen Van C', '07-22-1982', 'Ho Chi Minh', 123456787, 'nvc@gmail.com')
+
 select * from NhaSi
 
 INSERT INTO KHACHHANG ( HoTenKH, NgaySinhKH, DiaChiKH, SDTKH, EmailKH, MaNV) VALUES
-('Nguyen Van E', '05-15-1990', 'Ha Noi', 343434343, 'nve@gmail.com',1),
-('Tran Thi L', '12-10-1985', 'Da Nang', 454545454, 'ttl@gmail.com', 2),
-('Le Van M', '07-22-1982', 'Ho Chi Minh', 565656565, 'lvm@gmail.com', 3),
-('Hoang Van N', '03-18-1995', 'Hue', 676767676, 'hvn@gmail.com', 4),
-('Pham Thi K', '09-05-1988', 'Can Tho', 787878787, 'ptk@gmail.com', 5);
+('Nguyen Van E', '05-15-1990', 'Ha Noi', 555555551, 'nve@gmail.com',1),
+('Tran Thi L', '12-10-1985', 'Da Nang', 555555552, 'ttl@gmail.com', 2),
+('Le Van M', '07-22-1982', 'Ho Chi Minh', 555555553, 'lvm@gmail.com', 3)
+
 select * from KHACHHANG
 
 INSERT INTO HoSoBN ( NgayKham, NguoiKham, DichVuSuDung, MaKH, MaNS) VALUES
@@ -284,11 +265,11 @@ INSERT INTO LichCaNhanNS (Ngay, ThoiGian, MaNS) VALUES
 ('01-10-2023', '08:30:00', 1),
 ('02-15-2023', '14:45:00', 2),
 ('03-22-2023', '09:20:00', 3),
-('04-18-2023', '16:10:00', 4),
-('05-25-2023', '11:30:00', 5),
-('06-30-2023', '13:15:00', 1),
-('07-15-2023', '10:00:00', 2),
-('08-20-2023', '14:30:00', 3);
+('04-18-2023', '16:10:00', 1),
+('05-25-2023', '11:30:00', 2),
+('06-30-2023', '13:15:00', 3),
+('07-15-2023', '10:00:00', 1),
+('08-20-2023', '14:30:00', 2);
 select * from LichCaNhanNS
 
 
@@ -296,7 +277,7 @@ INSERT INTO LichHen (NgayHen, ThoiGianHen, NguoiDatLich, MaKH, MaNS) VALUES
 ('01-10-2023', '08:30:00', 'Nguyen Van E', 3, 2),
 ('02-15-2023', '14:45:00', 'Nguyen Van E', 2,2),
 ('03-22-2023', '09:20:00', 'Tran Thi L', 3,3),
-('04-18-2023', '16:10:00', 'Tran Thi L', 4,4);
+('04-18-2023', '16:10:00', 'Tran Thi L', 3,2);
 select * from LichHen
 
 
@@ -328,9 +309,8 @@ select * from CT_HoaDon
 INSERT INTO HoaDon ( TenKH, PhiThanhToan) VALUES
 ('Nguyen Van E', 2000000),
 ('Tran Thi L', 1400000),
-('Le Van M', 380000),
-('Hoang Van N', 130000),
-('Pham Thi K', 75000);
+('Le Van M', 380000);
+
 select * from HoaDon
 
 -- Xử lí đăng nhập tài khoản
@@ -504,5 +484,3 @@ GRANT SELECT, INSERT, UPDATE ON HoSoBN TO NHASIROLE
 GRANT SELECT, INSERT, UPDATE ON NHASI TO NHASIROLE
 GRANT SELECT, INSERT, UPDATE, DELETE ON CT_HOADON TO NHASIROLE
 GRANT SELECT, INSERT, UPDATE, DELETE ON LichCaNhanNS TO NHASIROLE
-
-
