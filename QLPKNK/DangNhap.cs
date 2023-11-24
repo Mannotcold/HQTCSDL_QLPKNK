@@ -155,7 +155,7 @@ namespace QLPKNK
                     }
                 case 1:
                     {
-                        Form Menu = new MenuBacSi(txtBox_tendangnhap.Text,ma);
+                        Form Menu = new MenuBacSi(txtBox_tendangnhap.Text,Ma);
                         this.Hide();
                         Menu.ShowDialog();
                         this.Close();

@@ -64,5 +64,11 @@ namespace QLPKNK
         {
             openChildForm(new AddHoSoBN());
         }
+
+        private void guna2GradientButton2_Click(object sender, EventArgs e)
+        {
+            openChildForm(new QLLichHenCaNhan(Ma));
+            
+        }
     }
 }
