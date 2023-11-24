@@ -13,10 +13,12 @@ namespace QLPKNK
     public partial class MenuBacSi : Form
     {
         string SĐT;
-        public MenuBacSi(string sdt)
+        string Ma;
+        public MenuBacSi(string sdt, string ma)
         {
             InitializeComponent();
             SĐT = sdt;
+            Ma = ma;
         }
 
 

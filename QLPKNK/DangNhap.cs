@@ -21,6 +21,7 @@ namespace QLPKNK
 
         public int user_type = -1;
         string LoaiTK = null;
+        string Ma = null;
         string tendangnhap;
         string matkhau;
 
@@ -48,48 +49,52 @@ namespace QLPKNK
 
         private void Run_SP_DangNhap()
         {
+
             try
             {
                 Connect();
 
-                using (command = new SqlCommand("Sp_DangNhap", connection))
+                using (command = new SqlCommand("SpDangNhap", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
 
-                    // Thêm tham số đầu vào
-                    command.Parameters.AddWithValue("@SDT", txtBox_tendangnhap.Text); // Thay thế giá trị thực tế
-                    command.Parameters.AddWithValue("@MatKhau", txtBox_matkhau.Text); // Thay thế giá trị thực tế
+                    // Add input parameters
+                    command.Parameters.AddWithValue("@SDT", txtBox_tendangnhap.Text);
+                    command.Parameters.AddWithValue("@MatKhau", txtBox_matkhau.Text);
 
-                    // Thêm tham số đầu ra
-                    SqlParameter loaiTKParameter = new SqlParameter("@LoaiTK", SqlDbType.Int);
+                    // Add output parameters
+                    SqlParameter loaiTKParameter = new SqlParameter("@LoaiTK", SqlDbType.VarChar, 50);
                     loaiTKParameter.Direction = ParameterDirection.Output;
                     command.Parameters.Add(loaiTKParameter);
 
-                    // Thực thi stored procedure
+                    SqlParameter maParameter = new SqlParameter("@Ma", SqlDbType.Char, 5);
+                    maParameter.Direction = ParameterDirection.Output;
+                    command.Parameters.Add(maParameter);
+
+                    // Execute the stored procedure
                     int result = command.ExecuteNonQuery();
 
-                    // Kiểm tra giá trị đầu ra và xử lý kết quả
-                    if (result > 0 && (int)loaiTKParameter.Value != 0)
+                    // Check the result and handle accordingly
+                    if (result > 0 && !string.IsNullOrEmpty(loaiTKParameter.Value.ToString()))
                     {
                         Console.WriteLine("Đăng nhập thành công. Loại tài khoản: " + loaiTKParameter.Value);
+                        // Access the output parameters
+                        // Use loaiTK and ma as needed
                     }
                     else
                     {
                         Console.WriteLine("Đăng nhập không thành công.");
                     }
+                    Console.WriteLine("Đăng nhập thành công. Loại tài khoản: " + loaiTKParameter.Value);
+                    // Access the output parameters
                     LoaiTK = loaiTKParameter.Value.ToString();
+                    Ma = maParameter.Value.ToString();
                 }
             }
-
             catch (Exception)
             {
                 MessageBox.Show("Tên đăng nhập hoặc mật khẩu không chính xác !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             }
-
-
-
-
         }
 
         private void DangNhap_Load(object sender, EventArgs e)
@@ -114,7 +119,6 @@ namespace QLPKNK
 
             // chạy SP đăng nhập, lấy LOAIACC
             Run_SP_DangNhap();
-
             // nếu tên đăng nhập hoặc mật khẩu sai
             if (LoaiTK == null)
             {
@@ -122,8 +126,7 @@ namespace QLPKNK
                 //resetvalue_DN();
                 return;
             }
-
-            // chuyển loại acc sang int
+            // chuyển loạitk sang int
             user_type = Int32.Parse(LoaiTK);
 
             // nếu acc này bị khóa
@@ -152,7 +155,7 @@ namespace QLPKNK
                     }
                 case 1:
                     {
-                        Form Menu = new MenuBacSi(txtBox_tendangnhap.Text);
+                        Form Menu = new MenuBacSi(txtBox_tendangnhap.Text,ma);
                         this.Hide();
                         Menu.ShowDialog();
                         this.Close();

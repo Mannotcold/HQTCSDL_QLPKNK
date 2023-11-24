@@ -12,12 +12,19 @@ namespace QLPKNK.BacSi
 {
     public partial class QLLichHen : Form
     {
-        public QLLichHen()
+        string Ma;
+        public QLLichHen(string ma)
         {
             InitializeComponent();
+            Ma = ma;
         }
 
         private void guna2Panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
         {
 
         }

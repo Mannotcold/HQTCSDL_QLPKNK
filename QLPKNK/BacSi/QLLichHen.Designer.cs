@@ -39,11 +39,11 @@ namespace QLPKNK.BacSi
             this.label11 = new System.Windows.Forms.Label();
             this.btnXoa = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dgvHSBA = new System.Windows.Forms.DataGridView();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnThem = new Guna.UI2.WinForms.Guna2GradientButton();
             this.Check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnThem = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHSBA)).BeginInit();
             this.guna2Panel3.SuspendLayout();
@@ -209,6 +209,12 @@ namespace QLPKNK.BacSi
             this.dgvHSBA.Size = new System.Drawing.Size(1116, 468);
             this.dgvHSBA.TabIndex = 37;
             // 
+            // Check
+            // 
+            this.Check.HeaderText = "Column1";
+            this.Check.Name = "Check";
+            this.Check.ReadOnly = true;
+            // 
             // guna2Panel3
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
@@ -226,33 +232,6 @@ namespace QLPKNK.BacSi
             this.guna2Panel3.Size = new System.Drawing.Size(1116, 311);
             this.guna2Panel3.TabIndex = 38;
             this.guna2Panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel3_Paint);
-            // 
-            // guna2DateTimePicker1
-            // 
-            this.guna2DateTimePicker1.BorderRadius = 6;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.CustomFormat = "HH:mm";
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(297, 104);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(178, 39);
-            this.guna2DateTimePicker1.TabIndex = 45;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2023, 8, 29, 0, 0, 0, 0);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(293, 79);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 21);
-            this.label1.TabIndex = 46;
-            this.label1.Text = "Giờ Khám:";
             // 
             // btnThem
             // 
@@ -272,12 +251,34 @@ namespace QLPKNK.BacSi
             this.btnThem.Size = new System.Drawing.Size(135, 45);
             this.btnThem.TabIndex = 47;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // Check
+            // label1
             // 
-            this.Check.HeaderText = "Column1";
-            this.Check.Name = "Check";
-            this.Check.ReadOnly = true;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(293, 79);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 21);
+            this.label1.TabIndex = 46;
+            this.label1.Text = "Giờ Khám:";
+            // 
+            // guna2DateTimePicker1
+            // 
+            this.guna2DateTimePicker1.BorderRadius = 6;
+            this.guna2DateTimePicker1.Checked = true;
+            this.guna2DateTimePicker1.CustomFormat = "HH:mm";
+            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(297, 104);
+            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
+            this.guna2DateTimePicker1.Size = new System.Drawing.Size(178, 39);
+            this.guna2DateTimePicker1.TabIndex = 45;
+            this.guna2DateTimePicker1.Value = new System.DateTime(2023, 8, 29, 0, 0, 0, 0);
             // 
             // QLLichHen
             // 
