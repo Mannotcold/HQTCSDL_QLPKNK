@@ -84,7 +84,7 @@ CREATE TABLE LichCaNhanNS
 (
   MaLichCaNhan  INT IDENTITY(1,1) PRIMARY KEY,
   Ngay          DATETIME NOT NULL,
-  ThoiGian      DATETIME NOT NULL,
+  ThoiGian      TIME NOT NULL,
   MaNS          INT NOT NULL
 );
 
@@ -299,12 +299,6 @@ INSERT INTO LichHen (NgayHen, ThoiGianHen, NguoiDatLich, MaKH, MaNS) VALUES
 ('04-18-2023', '16:10:00', 'Tran Thi L', 4,4);
 select * from LichHen
 
-('DV000', 'Khong su dung dich vu', 'Khong'),
-('DV001', 'Kham rang tong quat', 'Dich vu nhanh'),
-('DV002', 'Lay tuy', 'Dich vu nhanh'),
-('DV003', 'Nho rang khon', 'Dich vu nhanh'),
-('DV004', 'Tram rang', 'Dich vu nhanh'),
-('DV005', 'Trong rang su', 'Dich vu nhanh'),
 
 INSERT INTO DichVu (MaDV,TenDV, Loai) VALUES
 ('DV000', 'Khong su dung dich vu', 'Khong'),
@@ -342,39 +336,39 @@ select * from HoaDon
 -- Xử lí đăng nhập tài khoản
 DROP PROCEDURE IF EXISTS Sp_DangNhap;
 
-CREATE PROC Sp_DangNhap
-	@SDT INT,
-	@MatKhau VARCHAR(50),
-	@LoaiTK VARCHAR(50) OUTPUT
-AS
-BEGIN
-	-- Loại bỏ khởi tạo giá trị
-	-- SET @LoaiTK = 'NULL'
+--CREATE PROC Sp_DangNhap
+--	@SDT INT,
+--	@MatKhau VARCHAR(50),
+--	@LoaiTK VARCHAR(50) OUTPUT
+--AS
+--BEGIN
+--	-- Loại bỏ khởi tạo giá trị
+--	-- SET @LoaiTK = 'NULL'
 
-	IF NOT EXISTS (SELECT LoaiTK
-				FROM TaiKhoan 
-				WHERE SDT = @SDT 
-				AND MATKHAU = @MatKhau)
-	BEGIN
-		PRINT N'Sai tên đăng nhập hoặc mật khẩu'
-		RETURN 0
-	END
+--	IF NOT EXISTS (SELECT LoaiTK
+--				FROM TaiKhoan 
+--				WHERE SDT = @SDT 
+--				AND MATKHAU = @MatKhau)
+--	BEGIN
+--		PRINT N'Sai tên đăng nhập hoặc mật khẩu'
+--		RETURN 0
+--	END
 	
-	-- lấy loại acc
-	SET @LoaiTK = (SELECT LoaiTK
-				FROM TaiKhoan
-				WHERE  SDT = @SDT 
-				AND MATKHAU = @MatKhau)
+--	-- lấy loại acc
+--	SET @LoaiTK = (SELECT LoaiTK
+--				FROM TaiKhoan
+--				WHERE  SDT = @SDT 
+--				AND MATKHAU = @MatKhau)
 
-	-- xử lí đăng nhập
-	if (@LoaiTK IS NOT NULL)
-	BEGIN
-		PRINT N'Đăng nhập thành công'
-		RETURN 1
-	END
-	ELSE RETURN 0	
-END
-GO
+--	-- xử lí đăng nhập
+--	if (@LoaiTK IS NOT NULL)
+--	BEGIN
+--		PRINT N'Đăng nhập thành công'
+--		RETURN 1
+--	END
+--	ELSE RETURN 0	
+--END
+--GO
 select * from taikhoan
 
 CREATE PROC SpDangNhap
@@ -509,5 +503,6 @@ EXEC sp_addrolemember 'NHASIROLE', [987654321];
 GRANT SELECT, INSERT, UPDATE ON HoSoBN TO NHASIROLE
 GRANT SELECT, INSERT, UPDATE ON NHASI TO NHASIROLE
 GRANT SELECT, INSERT, UPDATE, DELETE ON CT_HOADON TO NHASIROLE
+GRANT SELECT, INSERT, UPDATE, DELETE ON LichCaNhanNS TO NHASIROLE
 
 

@@ -27,7 +27,7 @@ namespace QLPKNK
         {
             string sql = "SELECT * FROM LichCaNhanNS WHERE MaNS = '" + Ma + "'";
             TT_QLLichHen = Functions.GetDataToTable(sql);
-            //dgvLHCN.DataSource = TT_QLLichHen;
+            dgvLHCN.DataSource = TT_QLLichHen;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -48,7 +48,6 @@ namespace QLPKNK
                 }
             }
         }
-        string time;
         private void dgvHSBA_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int i;
@@ -81,25 +80,22 @@ namespace QLPKNK
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            //foreach (DataGridViewRow row in dgvLHCN.Rows)
-            //{
-            //    // Check if the checkbox in the DataGridView is checked
-            //    DataGridViewCheckBoxCell checkBoxCell = row.Cells["CheckBoxColumn"] as DataGridViewCheckBoxCell;
+            DialogResult rs = MessageBox.Show("Bạn có muốn cập nhật hay không", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+                try
+                {
 
-            //    if (Convert.ToBoolean(checkBoxCell.Value))
-            //    {
-            //        // Extract the primary key value
-            //        int primaryKeyValue = Convert.ToInt32(row.Cells["MaLichCaNhan"].Value);
+                    Functions.RunSQL("DELETE FROM LichCaNhanNS WHERE MaLichCaNhan = '" + malh + "'");
 
-            //        // Construct the SQL DELETE statement
-            //        string deleteQuery = $"DELETE FROM YourTableName WHERE MaLichCaNhan = {primaryKeyValue}";
 
-            //        Functions.RunSQL($"DELETE FROM YourTableName WHERE MaLichCaNhan = {primaryKeyValue}");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Cập nhật không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
-            //        // Execute the DELETE statement using your SqlConnection and SqlCommand
-
-            //    }
-            //}
+                }
+            }
         }
     }
 }

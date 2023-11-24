@@ -40,7 +40,6 @@ namespace QLPKNK
             {
                 try
                 {
-
                     Functions.RunSQL("insert into TAIKHOAN(SDT,MATKHAU,LoaiTK) VALUES ("+ username + " ,'" + password + "','3')");
                     Functions.RunSQL("EXEC sp_addlogin " + username + " ,'" + password + "', 'DOANHQT' ");
                     Functions.RunSQL("CREATE USER [" + username + "] FOR LOGIN [" + username + "]");

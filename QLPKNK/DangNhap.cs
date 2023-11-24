@@ -148,11 +148,13 @@ namespace QLPKNK
         {
             switch (user_type)
             {
+                //admin
                 case 0:
                     {
                        
                         break;
                     }
+                    //Bacsi
                 case 1:
                     {
                         Form Menu = new MenuBacSi(txtBox_tendangnhap.Text,Ma);
@@ -161,11 +163,17 @@ namespace QLPKNK
                         this.Close();
                         break;
                     }
+                    //NhanVien
                 case 2:
                     {
                         break;
                     }
-                
+                    //BenhNhan
+                case 3:
+                    {
+                        break;
+                    }
+
             }
         }
 
