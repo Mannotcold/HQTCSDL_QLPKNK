@@ -33,6 +33,7 @@ namespace QLPKNK
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvHSBA = new System.Windows.Forms.DataGridView();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.Datekham = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtmans = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnsua = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -51,7 +52,7 @@ namespace QLPKNK
             this.label14 = new System.Windows.Forms.Label();
             this.txtNguoiKham = new Guna.UI2.WinForms.Guna2TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.Datekham = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.btnThem = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHSBA)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -97,6 +98,7 @@ namespace QLPKNK
             // guna2Panel3
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.guna2Panel3.Controls.Add(this.btnThem);
             this.guna2Panel3.Controls.Add(this.Datekham);
             this.guna2Panel3.Controls.Add(this.txtmans);
             this.guna2Panel3.Controls.Add(this.label1);
@@ -119,6 +121,21 @@ namespace QLPKNK
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(1124, 311);
             this.guna2Panel3.TabIndex = 36;
+            // 
+            // Datekham
+            // 
+            this.Datekham.BorderRadius = 6;
+            this.Datekham.Checked = true;
+            this.Datekham.CustomFormat = "MM-dd-yyyy";
+            this.Datekham.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Datekham.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Datekham.Location = new System.Drawing.Point(357, 215);
+            this.Datekham.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.Datekham.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.Datekham.Name = "Datekham";
+            this.Datekham.Size = new System.Drawing.Size(178, 39);
+            this.Datekham.TabIndex = 44;
+            this.Datekham.Value = new System.DateTime(2023, 8, 29, 0, 0, 0, 0);
             // 
             // txtmans
             // 
@@ -171,7 +188,7 @@ namespace QLPKNK
             this.btnsua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnsua.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnsua.ForeColor = System.Drawing.Color.White;
-            this.btnsua.Location = new System.Drawing.Point(552, 94);
+            this.btnsua.Location = new System.Drawing.Point(557, 66);
             this.btnsua.Name = "btnsua";
             this.btnsua.Size = new System.Drawing.Size(135, 45);
             this.btnsua.TabIndex = 41;
@@ -210,7 +227,7 @@ namespace QLPKNK
             this.txtTuKhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTuKhoa.Name = "txtTuKhoa";
             this.txtTuKhoa.PasswordChar = '\0';
-            this.txtTuKhoa.PlaceholderText = "Nhập Khóa, Lớp, Khách hàng để tìm kiếm";
+            this.txtTuKhoa.PlaceholderText = "Nhập mã hồ sơ để tìm kiếm";
             this.txtTuKhoa.SelectedText = "";
             this.txtTuKhoa.Size = new System.Drawing.Size(344, 36);
             this.txtTuKhoa.TabIndex = 4;
@@ -234,6 +251,7 @@ namespace QLPKNK
             this.btnTraCuu.Size = new System.Drawing.Size(135, 45);
             this.btnTraCuu.TabIndex = 9;
             this.btnTraCuu.Text = "Tra cứu";
+            this.btnTraCuu.Click += new System.EventHandler(this.btnTraCuu_Click);
             // 
             // txtmahs
             // 
@@ -336,7 +354,7 @@ namespace QLPKNK
             this.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(552, 174);
+            this.btnXoa.Location = new System.Drawing.Point(557, 138);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(135, 45);
             this.btnXoa.TabIndex = 1;
@@ -457,20 +475,25 @@ namespace QLPKNK
             this.label16.TabIndex = 0;
             this.label16.Text = "Người khám:";
             // 
-            // Datekham
+            // btnThem
             // 
-            this.Datekham.BorderRadius = 6;
-            this.Datekham.Checked = true;
-            this.Datekham.CustomFormat = "MM-dd-yyyy";
-            this.Datekham.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Datekham.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Datekham.Location = new System.Drawing.Point(357, 215);
-            this.Datekham.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.Datekham.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.Datekham.Name = "Datekham";
-            this.Datekham.Size = new System.Drawing.Size(178, 39);
-            this.Datekham.TabIndex = 44;
-            this.Datekham.Value = new System.DateTime(2023, 8, 29, 0, 0, 0, 0);
+            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnThem.Animated = true;
+            this.btnThem.BorderRadius = 10;
+            this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThem.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Location = new System.Drawing.Point(557, 209);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(135, 45);
+            this.btnThem.TabIndex = 45;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // QLHoSoBN
             // 
@@ -512,5 +535,6 @@ namespace QLPKNK
         private Guna.UI2.WinForms.Guna2TextBox txtmans;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2DateTimePicker Datekham;
+        private Guna.UI2.WinForms.Guna2GradientButton btnThem;
     }
 }

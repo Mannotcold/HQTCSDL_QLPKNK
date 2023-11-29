@@ -68,7 +68,53 @@ namespace QLPKNK
                 try
                 {
                     MessageBox.Show(txtmahs.Text, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                    Functions.RunSQL("DELETE FROM HoSoBN WHERE MaHS = 'HS001'");
+                    Functions.RunSQL("DELETE FROM HoSoBN WHERE MaHS = '" + txtmahs.Text + "'");
+
+
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                }
+            }
+        }
+
+        private Form activeform = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeform != null)
+            {
+                activeform.Close();
+            }
+
+            activeform = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+
+            guna2Panel3.Controls.Clear(); // Xóa tất cả các controls hiện tại trong panel trước khi thêm form con mới
+            guna2Panel3.Controls.Add(childForm);
+            guna2Panel3.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new AddHoSoBN());
+        }
+
+        private void btnTraCuu_Click(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có muốn tìm kiếm hay không", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+                try
+                {
+                    MessageBox.Show(txtmahs.Text, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    Functions.RunSQL("select * from HoSoBN WHERE MaHS LIKE '" + txtTuKhoa.Text + "'");
 
 
 
