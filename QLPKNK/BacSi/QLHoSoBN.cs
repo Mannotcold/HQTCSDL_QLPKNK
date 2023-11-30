@@ -35,9 +35,9 @@ namespace QLPKNK
             Datekham.Text = dgvHSBA.Rows[i].Cells[1].Value.ToString();
             txtmahs.Text = dgvHSBA.Rows[i].Cells[0].Value.ToString();
             txtNguoiKham.Text = dgvHSBA.Rows[i].Cells[2].Value.ToString();
-            txtdvsd.Text = dgvHSBA.Rows[i].Cells[3].Value.ToString();
-            txtKH.Text = dgvHSBA.Rows[i].Cells[4].Value.ToString();
-            txtmans.Text = dgvHSBA.Rows[i].Cells[5].Value.ToString();
+            
+            txtKH.Text = dgvHSBA.Rows[i].Cells[3].Value.ToString();
+            txtmans.Text = dgvHSBA.Rows[i].Cells[4].Value.ToString();
         }
 
         private void btnsua_Click(object sender, EventArgs e)

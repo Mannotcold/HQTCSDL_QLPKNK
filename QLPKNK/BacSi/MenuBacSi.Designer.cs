@@ -112,6 +112,7 @@ namespace QLPKNK
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.TextOffset = new System.Drawing.Point(10, 0);
             this.btnLogout.UseTransparentBackground = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // guna2PictureBox1
             // 

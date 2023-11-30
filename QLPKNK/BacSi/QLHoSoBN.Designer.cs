@@ -29,8 +29,8 @@ namespace QLPKNK
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvHSBA = new System.Windows.Forms.DataGridView();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.Datekham = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -48,8 +48,6 @@ namespace QLPKNK
             this.btnXoa = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtKH = new Guna.UI2.WinForms.Guna2TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtdvsd = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.txtNguoiKham = new Guna.UI2.WinForms.Guna2TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.btnThem = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -67,23 +65,23 @@ namespace QLPKNK
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvHSBA.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHSBA.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHSBA.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHSBA.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvHSBA.ColumnHeadersHeight = 35;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvHSBA.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHSBA.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvHSBA.EnableHeadersVisualStyles = false;
             this.dgvHSBA.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvHSBA.Location = new System.Drawing.Point(0, 308);
@@ -112,8 +110,6 @@ namespace QLPKNK
             this.guna2Panel3.Controls.Add(this.btnXoa);
             this.guna2Panel3.Controls.Add(this.txtKH);
             this.guna2Panel3.Controls.Add(this.label13);
-            this.guna2Panel3.Controls.Add(this.txtdvsd);
-            this.guna2Panel3.Controls.Add(this.label14);
             this.guna2Panel3.Controls.Add(this.txtNguoiKham);
             this.guna2Panel3.Controls.Add(this.label16);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -129,11 +125,11 @@ namespace QLPKNK
             this.Datekham.CustomFormat = "MM-dd-yyyy";
             this.Datekham.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Datekham.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Datekham.Location = new System.Drawing.Point(357, 215);
+            this.Datekham.Location = new System.Drawing.Point(308, 212);
             this.Datekham.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.Datekham.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.Datekham.Name = "Datekham";
-            this.Datekham.Size = new System.Drawing.Size(178, 39);
+            this.Datekham.Size = new System.Drawing.Size(227, 39);
             this.Datekham.TabIndex = 44;
             this.Datekham.Value = new System.DateTime(2023, 8, 29, 0, 0, 0, 0);
             // 
@@ -270,13 +266,13 @@ namespace QLPKNK
             this.txtmahs.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtmahs.ForeColor = System.Drawing.Color.White;
             this.txtmahs.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtmahs.Location = new System.Drawing.Point(170, 215);
+            this.txtmahs.Location = new System.Drawing.Point(42, 215);
             this.txtmahs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtmahs.Name = "txtmahs";
             this.txtmahs.PasswordChar = '\0';
             this.txtmahs.PlaceholderText = "";
             this.txtmahs.SelectedText = "";
-            this.txtmahs.Size = new System.Drawing.Size(165, 36);
+            this.txtmahs.Size = new System.Drawing.Size(224, 36);
             this.txtmahs.TabIndex = 24;
             // 
             // label9
@@ -285,7 +281,7 @@ namespace QLPKNK
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(166, 190);
+            this.label9.Location = new System.Drawing.Point(38, 190);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(78, 21);
             this.label9.TabIndex = 25;
@@ -335,7 +331,7 @@ namespace QLPKNK
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(353, 190);
+            this.label11.Location = new System.Drawing.Point(304, 187);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(94, 21);
             this.label11.TabIndex = 15;
@@ -398,44 +394,6 @@ namespace QLPKNK
             this.label13.Size = new System.Drawing.Size(119, 21);
             this.label13.TabIndex = 7;
             this.label13.Text = "Mã khách hàng:";
-            // 
-            // txtdvsd
-            // 
-            this.txtdvsd.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtdvsd.Animated = true;
-            this.txtdvsd.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(153)))), ((int)(((byte)(149)))));
-            this.txtdvsd.BorderRadius = 6;
-            this.txtdvsd.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtdvsd.DefaultText = "";
-            this.txtdvsd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtdvsd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtdvsd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtdvsd.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtdvsd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.txtdvsd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtdvsd.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtdvsd.ForeColor = System.Drawing.Color.White;
-            this.txtdvsd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtdvsd.Location = new System.Drawing.Point(43, 215);
-            this.txtdvsd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtdvsd.Name = "txtdvsd";
-            this.txtdvsd.PasswordChar = '\0';
-            this.txtdvsd.PlaceholderText = "";
-            this.txtdvsd.SelectedText = "";
-            this.txtdvsd.Size = new System.Drawing.Size(112, 36);
-            this.txtdvsd.TabIndex = 2;
-            // 
-            // label14
-            // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(39, 190);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(125, 21);
-            this.label14.TabIndex = 5;
-            this.label14.Text = "Dịch vụ sử dụng:";
             // 
             // txtNguoiKham
             // 
@@ -528,8 +486,6 @@ namespace QLPKNK
         private Guna.UI2.WinForms.Guna2GradientButton btnXoa;
         private Guna.UI2.WinForms.Guna2TextBox txtKH;
         private System.Windows.Forms.Label label13;
-        private Guna.UI2.WinForms.Guna2TextBox txtdvsd;
-        private System.Windows.Forms.Label label14;
         private Guna.UI2.WinForms.Guna2TextBox txtNguoiKham;
         private System.Windows.Forms.Label label16;
         private Guna.UI2.WinForms.Guna2TextBox txtmans;
