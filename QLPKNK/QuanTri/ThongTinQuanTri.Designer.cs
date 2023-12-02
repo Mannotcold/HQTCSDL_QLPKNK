@@ -123,9 +123,9 @@ namespace QLPKNK.QuanTri
             this.labell.ForeColor = System.Drawing.Color.Black;
             this.labell.Location = new System.Drawing.Point(31, 144);
             this.labell.Name = "labell";
-            this.labell.Size = new System.Drawing.Size(80, 21);
+            this.labell.Size = new System.Drawing.Size(93, 21);
             this.labell.TabIndex = 101;
-            this.labell.Text = "Mã nha sĩ:";
+            this.labell.Text = "Mã quản trị:";
             // 
             // label5
             // 

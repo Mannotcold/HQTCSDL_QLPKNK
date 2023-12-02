@@ -97,17 +97,23 @@
     <Compile Include="QuanTri\AddTaiKhoan.Designer.cs">
       <DependentUpon>AddTaiKhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanTri\CapQuyen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanTri\CapQuyen.Designer.cs">
-      <DependentUpon>CapQuyen.cs</DependentUpon>
-    </Compile>
     <Compile Include="QuanTri\MenuAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="QuanTri\MenuAdmin.Designer.cs">
       <DependentUpon>MenuAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\QLDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanTri\QLDichVu.Designer.cs">
+      <DependentUpon>QLDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\QLThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanTri\QLThuoc.Designer.cs">
+      <DependentUpon>QLThuoc.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanTri\QuanLyTaiKhoan.cs">
       <SubType>Form</SubType>
@@ -157,11 +163,11 @@
     <EmbeddedResource Include="QuanTri\AddTaiKhoan.resx">
       <DependentUpon>AddTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuanTri\CapQuyen.resx">
-      <DependentUpon>CapQuyen.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="QuanTri\MenuAdmin.resx">
       <DependentUpon>MenuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanTri\QLThuoc.resx">
+      <DependentUpon>QLThuoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanTri\QuanLyTaiKhoan.resx">
       <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
@@ -188,6 +194,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BenhNhan\" />
+    <Folder Include="Image\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

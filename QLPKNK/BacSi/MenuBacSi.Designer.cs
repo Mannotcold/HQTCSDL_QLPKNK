@@ -69,7 +69,7 @@ namespace QLPKNK
             this.btnStatistic.Name = "btnStatistic";
             this.btnStatistic.Size = new System.Drawing.Size(161, 45);
             this.btnStatistic.TabIndex = 9;
-            this.btnStatistic.Text = "Thêm phiếu";
+            this.btnStatistic.Text = "Quản lý hồ sơ";
             this.btnStatistic.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnStatistic.TextOffset = new System.Drawing.Point(10, 0);
             this.btnStatistic.UseTransparentBackground = true;
@@ -106,7 +106,7 @@ namespace QLPKNK
             this.btnLogout.ImageSize = new System.Drawing.Size(30, 30);
             this.btnLogout.Location = new System.Drawing.Point(0, 745);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(167, 45);
+            this.btnLogout.Size = new System.Drawing.Size(184, 45);
             this.btnLogout.TabIndex = 8;
             this.btnLogout.Text = "Đăng xuất";
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -122,7 +122,7 @@ namespace QLPKNK
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(167, 140);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(184, 140);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 3;
             this.guna2PictureBox1.TabStop = false;
@@ -142,7 +142,7 @@ namespace QLPKNK
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(167, 790);
+            this.guna2Panel2.Size = new System.Drawing.Size(184, 790);
             this.guna2Panel2.TabIndex = 33;
             // 
             // guna2GradientButton2
@@ -168,9 +168,9 @@ namespace QLPKNK
             this.guna2GradientButton2.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2GradientButton2.Location = new System.Drawing.Point(3, 299);
             this.guna2GradientButton2.Name = "guna2GradientButton2";
-            this.guna2GradientButton2.Size = new System.Drawing.Size(161, 45);
+            this.guna2GradientButton2.Size = new System.Drawing.Size(178, 45);
             this.guna2GradientButton2.TabIndex = 34;
-            this.guna2GradientButton2.Text = "Thêm phiếu";
+            this.guna2GradientButton2.Text = "Quản lý lịch hen";
             this.guna2GradientButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton2.TextOffset = new System.Drawing.Point(10, 0);
             this.guna2GradientButton2.UseTransparentBackground = true;
@@ -201,7 +201,7 @@ namespace QLPKNK
             this.guna2GradientButton1.Name = "guna2GradientButton1";
             this.guna2GradientButton1.Size = new System.Drawing.Size(161, 45);
             this.guna2GradientButton1.TabIndex = 33;
-            this.guna2GradientButton1.Text = "Thêm phiếu";
+            this.guna2GradientButton1.Text = "Thêm hồ sơ";
             this.guna2GradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton1.TextOffset = new System.Drawing.Point(10, 0);
             this.guna2GradientButton1.UseTransparentBackground = true;
@@ -213,9 +213,9 @@ namespace QLPKNK
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.guna2Panel1.Location = new System.Drawing.Point(164, 0);
+            this.guna2Panel1.Location = new System.Drawing.Point(187, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1122, 787);
+            this.guna2Panel1.Size = new System.Drawing.Size(1116, 787);
             this.guna2Panel1.TabIndex = 32;
             // 
             // btnAccount
@@ -255,9 +255,9 @@ namespace QLPKNK
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.guna2Panel3.Location = new System.Drawing.Point(170, 0);
+            this.guna2Panel3.Location = new System.Drawing.Point(190, 0);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1122, 787);
+            this.guna2Panel3.Size = new System.Drawing.Size(1102, 787);
             this.guna2Panel3.TabIndex = 34;
             // 
             // MenuBacSi

@@ -31,5 +31,5 @@ E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.QuanTri.AddTaiKhoan.resources
 E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.QuanTri.MenuAdmin.resources
 E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.QuanTri.QuanLyTaiKhoan.resources
 E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.QuanTri.ThongTinQuanTri.resources
-E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.QuanTri.CapQuyen.resources
 E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.QLLichHenCaNhan.resources
+E:\HQTCSDL\DAHQTCSDL\QLPKNK\obj\Debug\QLPKNK.QuanTri.QLThuoc.resources
