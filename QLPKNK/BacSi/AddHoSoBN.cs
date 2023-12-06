@@ -8,18 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Data.SqlClient;
 namespace QLPKNK
 {
     public partial class AddHoSoBN : Form
     {
-        public AddHoSoBN()
+        string Ma;
+        public AddHoSoBN(string ma)
         {
             InitializeComponent();
+            Ma = ma;
         }
-
+        public static SqlConnection connection;
         private void btnThem_Click(object sender, EventArgs e)
         {
-
 
             // Duyệt qua từng hàng trong dataGridViewSource
             foreach (DataGridViewRow sourceRow in guna2DataGridView1.Rows)
@@ -31,16 +33,19 @@ namespace QLPKNK
                     DataGridViewRow newRow = (DataGridViewRow)sourceRow.Clone();
 
                     // Duyệt qua từng ô trong hàng và copy giá trị sang newRow
+                    string SL = sourceRow.Cells["SL"].Value.ToString();
                     string maDV_DichVu = sourceRow.Cells["MaDV"].Value.ToString();
                     string tenDV_DichVu = sourceRow.Cells["TenDV"].Value.ToString();
                     string loai_DichVu = sourceRow.Cells["Loai"].Value.ToString();
-                    decimal tien_DichVu = Convert.ToDecimal(sourceRow.Cells["Tien"].Value);
+                    string tien_DichVu = sourceRow.Cells["Tien"].Value.ToString();
 
-                    
-                    // Thêm vào CSDL SQL Server
-                    //AddRowToSQL(maDV, tenDV, tenThuoc, loaiDV, thanhTien, maHD, maHS);
+                    guna2DataGridView2.Rows.Add(maDV_DichVu.ToString(), tenDV_DichVu.ToString(), "null", SL.ToString(), loai_DichVu.ToString(), tien_DichVu.ToString());
                 }
             }
+
+
+
+
         }
 
         DataTable TT_CTHD;
@@ -48,9 +53,18 @@ namespace QLPKNK
         DataTable Thuoc;
         private void AddHoSoBN_Load(object sender, EventArgs e)
         {
-            string sql = "SELECT MaDV_Thuoc, TenDV, TenThuoc, LoaiDV, ThanhTien, MaHD, MaHS FROM CT_HoaDon  ";
-            TT_CTHD = Functions.GetDataToTable(sql);
-            guna2DataGridView2.DataSource = TT_CTHD;
+
+            MessageBox.Show(Ma);
+            txtNK.Text = Ma;
+
+            //fill combobox Khach hang
+            string sql0 = "SELECT * FROM KHACHHANG  ";
+            Functions.FillCombo(sql0, comboBoxKH, "MaKH");
+
+
+            //string sql = "SELECT MaDV_Thuoc, TenDV, TenThuoc, SL, LoaiDV, ThanhTien, MaHD, MaHS FROM CT_HoaDon  ";
+            //TT_CTHD = Functions.GetDataToTable(sql);
+            //guna2DataGridView2.DataSource = TT_CTHD;
 
 
             string sql1 = "SELECT MaDV,TenDV, Loai, Tien FROM DichVu  ";
@@ -62,6 +76,85 @@ namespace QLPKNK
             Thuoc = Functions.GetDataToTable(sql3);
             guna2DataGridView3.DataSource = Thuoc;
 
+        }
+
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            // Assuming your DataGridView is named guna2DataGridView2
+            if (guna2DataGridView2.SelectedRows.Count > 0)
+            {
+                // Get the index of the selected row and remove it
+                int selectedIndex = guna2DataGridView2.SelectedRows[0].Index;
+                guna2DataGridView2.Rows.RemoveAt(selectedIndex);
+
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to delete.");
+            }
+        }
+
+
+        //MaThuoc, TenThuoc, DonViTinh, ChiDinh, SLTonKho, NgayHetHan,Tien, MaQT
+        private void btnThemThuoc_Click(object sender, EventArgs e)
+        {
+            // Duyệt qua từng hàng trong dataGridViewSource
+            foreach (DataGridViewRow sourceRow in guna2DataGridView3.Rows)
+            {
+                DataGridViewCheckBoxCell checkboxCell = sourceRow.Cells[0] as DataGridViewCheckBoxCell;
+                if (checkboxCell != null && Convert.ToBoolean(checkboxCell.Value))
+                {
+                    // Clone hàng từ dataGridViewSource
+                    DataGridViewRow newRow = (DataGridViewRow)sourceRow.Clone();
+
+                    // Duyệt qua từng ô trong hàng và copy giá trị sang newRow
+                    string SLThuoc = sourceRow.Cells["SLTHUOC"].Value.ToString();
+                    string maThuoc = sourceRow.Cells["MaThuoc"].Value.ToString();
+                    string tenthuoc = sourceRow.Cells["TenThuoc"].Value.ToString();
+                    string loaiChiDinh = sourceRow.Cells["ChiDinh"].Value.ToString();
+                    string tienthuoc = sourceRow.Cells["Tien"].Value.ToString();
+                    //Functions.RunSQL(" INSERT INTO CT_HoaDon(MaDV_Thuoc, TenDV, TenThuoc, SL, LoaiDV, ThanhTien , MaHD, MaHS) " +
+                    //    "VALUES ('" + maDV_DichVu.ToString() + "', '" + tenDV_DichVu.ToString() + "', 'null' , '" + SL.ToString() + "', '" + loai_DichVu.ToString() + "' , '" + tien_DichVu.ToString() + "' , '2', '1')");
+
+                    guna2DataGridView2.Rows.Add(maThuoc.ToString(), "null", tenthuoc.ToString(), SLThuoc.ToString(), loaiChiDinh.ToString(), tienthuoc.ToString());
+                }
+            }
+        }
+
+        string maHS;
+        void GetMaHSByMaKHMaNS()
+        {
+
+                // Giá trị mặc định hoặc giá trị lỗi
+                string maKH = comboBoxKH.Text;
+                string maNS = txtNK.Text;
+                string Sql = "SELECT MaHS FROM HoSoBN WHERE MaKH =  '" + maKH.ToString() + "' AND MaNS =  '" + maNS.ToString() + "'";
+                string mahs = Functions.GetFieldValues(Sql);
+
+            MessageBox.Show(mahs);
+
+        }
+
+        private void btnThemHS_Click(object sender, EventArgs e)
+        {
+            GetMaHSByMaKHMaNS();
+            foreach (DataGridViewRow sourceRow in guna2DataGridView2.Rows)
+            {
+                string maDV_Thuoc = sourceRow.Cells["MaDV_Thuoc"].Value.ToString();
+                string tenDV = sourceRow.Cells["TenDV"].Value.ToString();
+                string tenThuoc = sourceRow.Cells["TenThuoc"].Value.ToString();
+                int soLuong = Convert.ToInt32(sourceRow.Cells["SLSD"].Value);
+                string loaiDV = sourceRow.Cells["LoaiDV"].Value.ToString();
+                decimal thanhTien = Convert.ToDecimal(sourceRow.Cells["ThanhTien"].Value);
+                //string maHD = sourceRow.Cells["MaHD"].Value.ToString();
+                //string maHS = sourceRow.Cells["MaHS"].Value.ToString();
+
+                // Thêm vào CSDL SQL Server
+                Functions.RunSQL(" INSERT INTO CT_HoaDon(MaDV_Thuoc, TenDV, TenThuoc, SL, LoaiDV, ThanhTien , MaHD, MaHS) " +
+                    "VALUES ('" + maDV_Thuoc.ToString() + "', '" + tenDV.ToString() + "', '" + tenThuoc.ToString() + "' , '" + soLuong.ToString() + "', '" + loaiDV.ToString() + "' , '" + thanhTien.ToString() + "' , '2', '1')");
+
+            }
         }
     }
 }

@@ -231,6 +231,7 @@ namespace QLPKNK.QuanTri
             this.btnThem.Size = new System.Drawing.Size(135, 45);
             this.btnThem.TabIndex = 51;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnback
             // 

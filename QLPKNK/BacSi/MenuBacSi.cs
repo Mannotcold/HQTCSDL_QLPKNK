@@ -62,7 +62,7 @@ namespace QLPKNK
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
-            openChildForm(new AddHoSoBN());
+            openChildForm(new AddHoSoBN(Ma));
         }
 
         private void guna2GradientButton2_Click(object sender, EventArgs e)

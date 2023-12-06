@@ -21,5 +21,10 @@ namespace QLPKNK.QuanTri
         {
 
         }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

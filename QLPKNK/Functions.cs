@@ -114,14 +114,13 @@ namespace QLPKNK
             com.Dispose();
             com = null;
         }
-        public static void FillCombo(string sql, ComboBox cbo, string ma, string ten) // đổ dữ liệu vào comboBox
+        public static void FillCombo(string sql, ComboBox cbo, string ma) // đổ dữ liệu vào comboBox
         {
             SqlDataAdapter dap = new SqlDataAdapter(sql, connection);
             DataTable table = new DataTable();
             dap.Fill(table);
             cbo.DataSource = table;
             cbo.ValueMember = ma;
-            cbo.DisplayMember = ten;
         }
 
         public static string GetFieldValues(string sql) // lấy dữ liệu từ câu lệnh sql

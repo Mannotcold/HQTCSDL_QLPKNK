@@ -103,7 +103,7 @@ namespace QLPKNK
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            openChildForm(new AddHoSoBN());
+            //openChildForm(new AddHoSoBN(Ma));
         }
 
         private void btnTraCuu_Click(object sender, EventArgs e)
