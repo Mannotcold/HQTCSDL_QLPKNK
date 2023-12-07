@@ -114,6 +114,25 @@ namespace QLPKNK
             com.Dispose();
             com = null;
         }
+
+        public static void RunSQL1(string sql) // chạy câu lệnh sql
+        {
+
+            SqlCommand com = new SqlCommand();
+            //Lấy dữ liệu về từ kết quả câu lệnh trên
+            //ExecuteReader() dùng với select
+            //ExecuteNonquery(); với inserrt update delete
+            //com.ExecuteNonQuery();
+            com.CommandType = CommandType.Text;
+            com.CommandText = sql;
+            com.Connection = connection;
+            //loaddata_PhieuThu();
+            int kq = com.ExecuteNonQuery();
+
+            //Giải phóng bộ nhớ
+            com.Dispose();
+            com = null;
+        }
         public static void FillCombo(string sql, ComboBox cbo, string ma) // đổ dữ liệu vào comboBox
         {
             SqlDataAdapter dap = new SqlDataAdapter(sql, connection);

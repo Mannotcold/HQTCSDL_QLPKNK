@@ -44,39 +44,9 @@ namespace QLPKNK
             }
 
 
-
-
         }
 
-        DataTable TT_CTHD;
-        DataTable TT;
-        DataTable Thuoc;
-        private void AddHoSoBN_Load(object sender, EventArgs e)
-        {
-
-            MessageBox.Show(Ma);
-            txtNK.Text = Ma;
-
-            //fill combobox Khach hang
-            string sql0 = "SELECT * FROM KHACHHANG  ";
-            Functions.FillCombo(sql0, comboBoxKH, "MaKH");
-
-
-            //string sql = "SELECT MaDV_Thuoc, TenDV, TenThuoc, SL, LoaiDV, ThanhTien, MaHD, MaHS FROM CT_HoaDon  ";
-            //TT_CTHD = Functions.GetDataToTable(sql);
-            //guna2DataGridView2.DataSource = TT_CTHD;
-
-
-            string sql1 = "SELECT MaDV,TenDV, Loai, Tien FROM DichVu  ";
-            TT = Functions.GetDataToTable(sql1);
-            guna2DataGridView1.DataSource = TT;
-
-
-            string sql3 = "SELECT MaThuoc, TenThuoc, DonViTinh, ChiDinh, SLTonKho, NgayHetHan,Tien FROM Thuoc";
-            Thuoc = Functions.GetDataToTable(sql3);
-            guna2DataGridView3.DataSource = Thuoc;
-
-        }
+        
 
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -164,8 +134,45 @@ namespace QLPKNK
             string makh = comboBoxKH.Text;
             string sql = "INSERT INTO HoSoBN (NgayKham, NguoiKham, MaKH, MaNS) " +
                "VALUES ('" + ngaykham.ToString() + "', '" + mans.ToString() + "', '" + makh.ToString() + "' , '" + mans.ToString() + "')";
-            Functions.RunSQL(sql);
+            Functions.RunSQL1(sql);
            InsertCT_HOADON();
+            loadform();
+        }
+
+
+        DataTable TT_CTHD;
+        DataTable TT;
+        DataTable Thuoc;
+
+        void loadform()
+        {
+            txtNK.Text = Ma;
+
+            //fill combobox Khach hang
+            string sql0 = "SELECT * FROM KHACHHANG  ";
+            Functions.FillCombo(sql0, comboBoxKH, "MaKH");
+
+
+            //string sql = "SELECT MaDV_Thuoc, TenDV, TenThuoc, SL, LoaiDV, ThanhTien, MaHD, MaHS FROM CT_HoaDon  ";
+            //TT_CTHD = Functions.GetDataToTable(sql);
+            //guna2DataGridView2.DataSource = TT_CTHD;
+
+
+            string sql1 = "SELECT MaDV,TenDV, Loai, Tien FROM DichVu  ";
+            TT = Functions.GetDataToTable(sql1);
+            guna2DataGridView1.DataSource = TT;
+
+
+            string sql3 = "SELECT MaThuoc, TenThuoc, DonViTinh, ChiDinh, SLTonKho, NgayHetHan,Tien FROM Thuoc";
+            Thuoc = Functions.GetDataToTable(sql3);
+            guna2DataGridView3.DataSource = Thuoc;
+        }
+        private void AddHoSoBN_Load(object sender, EventArgs e)
+        {
+            loadform();
+
+
+
         }
     }
 }
