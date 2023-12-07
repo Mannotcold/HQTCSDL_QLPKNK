@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using QLPKNK;
+using QLPKNK.QuanTri;
 
 namespace QLPKNK
 {
@@ -151,7 +152,10 @@ namespace QLPKNK
                 //admin
                 case 0:
                     {
-                       
+                        Form Menu = new MenuAdmin(txtBox_tendangnhap.Text, Ma);
+                        this.Hide();
+                        Menu.ShowDialog();
+                        this.Close();
                         break;
                     }
                     //Bacsi

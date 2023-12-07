@@ -166,6 +166,9 @@
     <EmbeddedResource Include="QuanTri\MenuAdmin.resx">
       <DependentUpon>MenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanTri\QLDichVu.resx">
+      <DependentUpon>QLDichVu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanTri\QLThuoc.resx">
       <DependentUpon>QLThuoc.cs</DependentUpon>
     </EmbeddedResource>

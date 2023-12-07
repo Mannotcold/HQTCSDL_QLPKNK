@@ -288,6 +288,7 @@ namespace QLPKNK.QuanTri
             this.btnUpdate.Size = new System.Drawing.Size(135, 45);
             this.btnUpdate.TabIndex = 91;
             this.btnUpdate.Text = "Sửa";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtName
             // 
@@ -478,6 +479,7 @@ namespace QLPKNK.QuanTri
             this.Controls.Add(this.label6);
             this.Name = "ThongTinQuanTri";
             this.Text = "ThongTinQuanTri";
+            this.Load += new System.EventHandler(this.ThongTinQuanTri_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
