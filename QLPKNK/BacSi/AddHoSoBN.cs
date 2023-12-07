@@ -130,13 +130,12 @@ namespace QLPKNK
                 string maKH = comboBoxKH.Text;
                 string maNS = txtNK.Text;
                 string Sql = "SELECT MaHS FROM HoSoBN WHERE MaKH =  '" + maKH.ToString() + "' AND MaNS =  '" + maNS.ToString() + "'";
-                string mahs = Functions.GetFieldValues(Sql);
+                maHS = Functions.GetFieldValues(Sql);
 
-            MessageBox.Show(mahs);
 
         }
 
-        private void btnThemHS_Click(object sender, EventArgs e)
+        void InsertCT_HOADON()
         {
             GetMaHSByMaKHMaNS();
             foreach (DataGridViewRow sourceRow in guna2DataGridView2.Rows)
@@ -148,13 +147,25 @@ namespace QLPKNK
                 string loaiDV = sourceRow.Cells["LoaiDV"].Value.ToString();
                 decimal thanhTien = Convert.ToDecimal(sourceRow.Cells["ThanhTien"].Value);
                 //string maHD = sourceRow.Cells["MaHD"].Value.ToString();
-                //string maHS = sourceRow.Cells["MaHS"].Value.ToString();
+                
 
                 // Thêm vào CSDL SQL Server
                 Functions.RunSQL(" INSERT INTO CT_HoaDon(MaDV_Thuoc, TenDV, TenThuoc, SL, LoaiDV, ThanhTien , MaHD, MaHS) " +
-                    "VALUES ('" + maDV_Thuoc.ToString() + "', '" + tenDV.ToString() + "', '" + tenThuoc.ToString() + "' , '" + soLuong.ToString() + "', '" + loaiDV.ToString() + "' , '" + thanhTien.ToString() + "' , '2', '1')");
+                    "VALUES ('" + maDV_Thuoc.ToString() + "', '" + tenDV.ToString() + "', '" + tenThuoc.ToString() + "' , '" + soLuong.ToString() + "', '" + loaiDV.ToString() + "' , '" + thanhTien.ToString() + "' , null, '" + maHS.ToString() + "')");
 
             }
+
+        }
+
+        private void btnThemHS_Click(object sender, EventArgs e)
+        {
+            string mans = txtNK.Text;
+            string ngaykham = Datekham.Text;
+            string makh = comboBoxKH.Text;
+            string sql = "INSERT INTO HoSoBN (NgayKham, NguoiKham, MaKH, MaNS) " +
+               "VALUES ('" + ngaykham.ToString() + "', '" + mans.ToString() + "', '" + makh.ToString() + "' , '" + mans.ToString() + "')";
+            Functions.RunSQL(sql);
+           InsertCT_HOADON();
         }
     }
 }

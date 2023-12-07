@@ -12,9 +12,12 @@ namespace QLPKNK
 {
     public partial class QLHoSoBN : Form
     {
-        public QLHoSoBN()
+        string Ma;
+        
+        public QLHoSoBN(string ma)
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            Ma = ma;
         }
 
 
@@ -103,7 +106,7 @@ namespace QLPKNK
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            //openChildForm(new AddHoSoBN(Ma));
+            openChildForm(new AddHoSoBN(Ma));
         }
 
         private void btnTraCuu_Click(object sender, EventArgs e)

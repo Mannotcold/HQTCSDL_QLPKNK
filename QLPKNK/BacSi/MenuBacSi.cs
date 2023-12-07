@@ -51,7 +51,7 @@ namespace QLPKNK
 
         private void btnStatistic_Click(object sender, EventArgs e)
         {
-            openChildForm(new QLHoSoBN());
+            openChildForm(new QLHoSoBN(Ma));
 
         }
 
