@@ -72,5 +72,10 @@ namespace QLPKNK.QuanTri
         {
 
         }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            openChildForm(new QuanLyTaiKhoan(Ma));
+        }
     }
 }

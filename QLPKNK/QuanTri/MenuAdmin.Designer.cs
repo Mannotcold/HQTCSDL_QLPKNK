@@ -53,9 +53,10 @@ namespace QLPKNK.QuanTri
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.guna2Panel1.Location = new System.Drawing.Point(177, 0);
+            this.guna2Panel1.Location = new System.Drawing.Point(236, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(975, 772);
+            this.guna2Panel1.Size = new System.Drawing.Size(1300, 950);
             this.guna2Panel1.TabIndex = 34;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -80,9 +81,10 @@ namespace QLPKNK.QuanTri
             this.btnStatistic.Image = ((System.Drawing.Image)(resources.GetObject("btnStatistic.Image")));
             this.btnStatistic.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnStatistic.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnStatistic.Location = new System.Drawing.Point(-7, 299);
+            this.btnStatistic.Location = new System.Drawing.Point(-9, 368);
+            this.btnStatistic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStatistic.Name = "btnStatistic";
-            this.btnStatistic.Size = new System.Drawing.Size(190, 45);
+            this.btnStatistic.Size = new System.Drawing.Size(253, 55);
             this.btnStatistic.TabIndex = 9;
             this.btnStatistic.Text = "Thêm tài khoản";
             this.btnStatistic.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -93,9 +95,10 @@ namespace QLPKNK.QuanTri
             // guna2Separator1
             // 
             this.guna2Separator1.FillColor = System.Drawing.Color.Gray;
-            this.guna2Separator1.Location = new System.Drawing.Point(-3, 381);
+            this.guna2Separator1.Location = new System.Drawing.Point(-4, 469);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(200, 10);
+            this.guna2Separator1.Size = new System.Drawing.Size(267, 12);
             this.guna2Separator1.TabIndex = 3;
             // 
             // btnLogout
@@ -119,9 +122,10 @@ namespace QLPKNK.QuanTri
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnLogout.Location = new System.Drawing.Point(0, 727);
+            this.btnLogout.Location = new System.Drawing.Point(0, 895);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(183, 45);
+            this.btnLogout.Size = new System.Drawing.Size(244, 55);
             this.btnLogout.TabIndex = 8;
             this.btnLogout.Text = "Đăng xuất";
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -144,8 +148,9 @@ namespace QLPKNK.QuanTri
             this.guna2Panel2.Controls.Add(this.btnAccount);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(183, 772);
+            this.guna2Panel2.Size = new System.Drawing.Size(244, 950);
             this.guna2Panel2.TabIndex = 35;
             // 
             // guna2GradientButton1
@@ -169,14 +174,16 @@ namespace QLPKNK.QuanTri
             this.guna2GradientButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2GradientButton1.Image")));
             this.guna2GradientButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2GradientButton1.Location = new System.Drawing.Point(-7, 146);
+            this.guna2GradientButton1.Location = new System.Drawing.Point(-9, 180);
+            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(190, 45);
+            this.guna2GradientButton1.Size = new System.Drawing.Size(253, 55);
             this.guna2GradientButton1.TabIndex = 41;
             this.guna2GradientButton1.Text = "Quản lý tài khoản";
             this.guna2GradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton1.TextOffset = new System.Drawing.Point(10, 0);
             this.guna2GradientButton1.UseTransparentBackground = true;
+            this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
             // 
             // guna2GradientButton5
             // 
@@ -199,9 +206,10 @@ namespace QLPKNK.QuanTri
             this.guna2GradientButton5.Image = ((System.Drawing.Image)(resources.GetObject("guna2GradientButton5.Image")));
             this.guna2GradientButton5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton5.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2GradientButton5.Location = new System.Drawing.Point(-7, 248);
+            this.guna2GradientButton5.Location = new System.Drawing.Point(-9, 305);
+            this.guna2GradientButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GradientButton5.Name = "guna2GradientButton5";
-            this.guna2GradientButton5.Size = new System.Drawing.Size(178, 45);
+            this.guna2GradientButton5.Size = new System.Drawing.Size(237, 55);
             this.guna2GradientButton5.TabIndex = 40;
             this.guna2GradientButton5.Text = "Quản lý dịch vụ";
             this.guna2GradientButton5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -230,9 +238,10 @@ namespace QLPKNK.QuanTri
             this.guna2GradientButton3.Image = ((System.Drawing.Image)(resources.GetObject("guna2GradientButton3.Image")));
             this.guna2GradientButton3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton3.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2GradientButton3.Location = new System.Drawing.Point(-7, 197);
+            this.guna2GradientButton3.Location = new System.Drawing.Point(-9, 242);
+            this.guna2GradientButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GradientButton3.Name = "guna2GradientButton3";
-            this.guna2GradientButton3.Size = new System.Drawing.Size(161, 45);
+            this.guna2GradientButton3.Size = new System.Drawing.Size(215, 55);
             this.guna2GradientButton3.TabIndex = 37;
             this.guna2GradientButton3.Text = "Quản lý thuốc";
             this.guna2GradientButton3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -243,18 +252,19 @@ namespace QLPKNK.QuanTri
             // guna2Separator2
             // 
             this.guna2Separator2.FillColor = System.Drawing.Color.Gray;
-            this.guna2Separator2.Location = new System.Drawing.Point(-3, 130);
+            this.guna2Separator2.Location = new System.Drawing.Point(-4, 160);
+            this.guna2Separator2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Separator2.Name = "guna2Separator2";
-            this.guna2Separator2.Size = new System.Drawing.Size(200, 10);
+            this.guna2Separator2.Size = new System.Drawing.Size(267, 12);
             this.guna2Separator2.TabIndex = 13;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(53, 25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(71, 31);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.Size = new System.Drawing.Size(85, 79);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
@@ -264,10 +274,9 @@ namespace QLPKNK.QuanTri
             this.lb_tenadmin_AD.AutoSize = true;
             this.lb_tenadmin_AD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_tenadmin_AD.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lb_tenadmin_AD.Location = new System.Drawing.Point(59, 99);
-            this.lb_tenadmin_AD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_tenadmin_AD.Location = new System.Drawing.Point(79, 122);
             this.lb_tenadmin_AD.Name = "lb_tenadmin_AD";
-            this.lb_tenadmin_AD.Size = new System.Drawing.Size(54, 20);
+            this.lb_tenadmin_AD.Size = new System.Drawing.Size(68, 25);
             this.lb_tenadmin_AD.TabIndex = 11;
             this.lb_tenadmin_AD.Text = "Admin";
             // 
@@ -276,10 +285,10 @@ namespace QLPKNK.QuanTri
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(0, 725);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(0, 893);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(183, 2);
+            this.panel1.Size = new System.Drawing.Size(244, 2);
             this.panel1.TabIndex = 10;
             // 
             // btnAccount
@@ -303,9 +312,10 @@ namespace QLPKNK.QuanTri
             this.btnAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAccount.Image")));
             this.btnAccount.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAccount.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAccount.Location = new System.Drawing.Point(-7, 346);
+            this.btnAccount.Location = new System.Drawing.Point(-9, 426);
+            this.btnAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Size = new System.Drawing.Size(194, 45);
+            this.btnAccount.Size = new System.Drawing.Size(259, 55);
             this.btnAccount.TabIndex = 7;
             this.btnAccount.Text = "Tài khoản";
             this.btnAccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -315,11 +325,12 @@ namespace QLPKNK.QuanTri
             // 
             // MenuAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1154, 772);
+            this.ClientSize = new System.Drawing.Size(1539, 950);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2Panel2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MenuAdmin";
             this.Text = "FormAdmin";
             this.guna2Panel2.ResumeLayout(false);

@@ -8,130 +8,103 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QLPKNK.QuanTri
 {
     public partial class QuanLyTaiKhoan : Form
     {
-        public QuanLyTaiKhoan()
+        string Ma;
+        public QuanLyTaiKhoan(string ma)
         {
             InitializeComponent();
+            Ma = ma;
         }
-        string str = "Data Source=DESKTOP-6IATTTJ;Initial Catalog=DOANHQT;Integrated Security=True";
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
+     
 
         private void themtk_qt_Click(object sender, EventArgs e)
         {
-
-            using (SqlConnection connection = new SqlConnection(str))
+            if(txtBox_tendangnhap_DSTK.Text != "" && txtBox_matkhau_DSTK.Text != "" && ComboBox1.SelectedItem.ToString() != "")
             {
-                if(txtBox_tendangnhap_DSTK.Text != "" && txtBox_matkhau_DSTK.Text != "" && txtBox_loaitaikhoan_DSTK.Text != "")
-                {
-                    connection.Open();
-                    SqlCommand cmd = new SqlCommand("insert into TaiKhoan values ('" + txtBox_tendangnhap_DSTK.Text + "','" + txtBox_matkhau_DSTK.Text + "'," + txtBox_loaitaikhoan_DSTK.Text + ")", connection);
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    MessageBox.Show("Thêm thành công");
-                    connection.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Điền đầy đủ thông tin");
-                }
+                Functions.RunSQL("insert into TaiKhoan values ('" + txtBox_tendangnhap_DSTK.Text + "','" + txtBox_matkhau_DSTK.Text + "'," + ComboBox1.SelectedItem.ToString() + ")");    
+                MessageBox.Show("Thêm thành công");
+            }
+            else
+            {
+                MessageBox.Show("Điền đầy đủ thông tin");
             }
         }
 
         private void xoatk_qt_Click(object sender, EventArgs e)
-        {
-            using (SqlConnection connection = new SqlConnection(str))
+        {    
+            if(txtBox_tendangnhap_DSTK.Text != "")
             {
-                if(txtBox_tendangnhap_DSTK.Text != "")
-                {
-                    connection.Open();
-                    SqlCommand cmd = new SqlCommand("delete from TaiKhoan where SDT = '" + txtBox_tendangnhap_DSTK.Text + "'", connection);
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    MessageBox.Show("Xóa thành công");
-                    connection.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Điền tên tài khoản bạn muốn xóa");
-                }    
-                
+                Functions.RunSQL("delete from TaiKhoan where SDT = '" + txtBox_tendangnhap_DSTK.Text + "'");   
+                MessageBox.Show("Xóa thành công");                   
             }
+            else
+            {
+                MessageBox.Show("Điền tên tài khoản bạn muốn xóa");
+            }              
         }
 
         private void capnhattk_qt_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(str))
+            
+            if (txtBox_tendangnhap_DSTK.Text != "" && txtBox_matkhau_DSTK.Text != "" && ComboBox1.SelectedItem == null)
             {
-                if (txtBox_tendangnhap_DSTK.Text != "" && txtBox_matkhau_DSTK.Text != "" && txtBox_loaitaikhoan_DSTK.Text =="")
-                {
-                    connection.Open();
-                    SqlCommand cmd = new SqlCommand("update TaiKhoan set MatKhau ='"+txtBox_matkhau_DSTK.Text+"' where SDT = '" + txtBox_tendangnhap_DSTK.Text + "'", connection);
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    MessageBox.Show("Cập nhật mật khẩu thành công");
-                    connection.Close();
-                }
-                if(txtBox_tendangnhap_DSTK.Text != "" && txtBox_matkhau_DSTK.Text == "" && txtBox_loaitaikhoan_DSTK.Text != "")
-                {
-                    connection.Open();
-                    SqlCommand cmd = new SqlCommand("update TaiKhoan set LoaiTK ='" + txtBox_loaitaikhoan_DSTK.Text + "' where SDT = '" + txtBox_tendangnhap_DSTK.Text + "'", connection);
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    MessageBox.Show("Cập nhật loại tài khoản thành công");
-                    connection.Close();
-                }
-                if(txtBox_tendangnhap_DSTK.Text != "" && txtBox_matkhau_DSTK.Text != "" && txtBox_loaitaikhoan_DSTK.Text != "")
-                {
-                    connection.Open();
-                    SqlCommand cmd = new SqlCommand("update TaiKhoan set LoaiTK ='" + txtBox_loaitaikhoan_DSTK.Text + "', MatKhau = '" +txtBox_matkhau_DSTK.Text + "' where SDT = '" + txtBox_tendangnhap_DSTK.Text + "'", connection);
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    MessageBox.Show("Cập nhật  tài khoản thành công");
-                    connection.Close();
-                }
-                if(txtBox_tendangnhap_DSTK.Text == "")
-                {
-                    MessageBox.Show("Vui lòng điền tên tài khoản bạn muốn cập nhật");
-                }    
+                Functions.RunSQL("update TaiKhoan set MatKhau ='" + txtBox_matkhau_DSTK.Text + "' where SDT = '" + txtBox_tendangnhap_DSTK.Text + "'");
+                MessageBox.Show("Cập nhật mật khẩu thành công");
+                    
             }
+            if(txtBox_tendangnhap_DSTK.Text != "" && txtBox_matkhau_DSTK.Text == "" && ComboBox1.SelectedItem != null)
+            {
+                Functions.RunSQL("update TaiKhoan set LoaiTK ='" + ComboBox1.SelectedItem.ToString() + "' where SDT = '" + txtBox_tendangnhap_DSTK.Text + "'");
+                MessageBox.Show("Cập nhật loại tài khoản thành công");
+                    
+            }
+            if(txtBox_tendangnhap_DSTK.Text != "" && txtBox_matkhau_DSTK.Text != "" && ComboBox1.SelectedItem != null)
+            {
+                Functions.RunSQL("update TaiKhoan set LoaiTK ='" + ComboBox1.SelectedItem.ToString() + "', MatKhau = '" + txtBox_matkhau_DSTK.Text + "' where SDT = '" + txtBox_tendangnhap_DSTK.Text + "'");    
+                MessageBox.Show("Cập nhật tài khoản thành công");
+                    
+            }
+            if(txtBox_tendangnhap_DSTK.Text == "")
+            {
+                MessageBox.Show("Vui lòng điền tên tài khoản bạn muốn cập nhật");
+            }    
+            
         }
 
         private void khoatk_qt_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(str))
+
+
+            if (txtBox_tendangnhap_DSTK.Text != "")
             {
-                if(txtBox_tendangnhap_DSTK.Text != "")
-                {
-                    connection.Open();
-                    SqlCommand cmd = new SqlCommand("update TaiKhoan set LoaiTK = -1 where SDT ='" + txtBox_tendangnhap_DSTK.Text + "'", connection);
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    MessageBox.Show("Khóa thành công");
-                    connection.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Vui lòng điền tên tài khoản bạn muốn khóa");
-                }    
-                
+                Functions.RunSQL("update TaiKhoan set LoaiTK = -1 where SDT ='" + txtBox_tendangnhap_DSTK.Text + "'");
+
+
+                MessageBox.Show("Khóa thành công");
             }
+            else
+            {
+                MessageBox.Show("Vui lòng điền tên tài khoản bạn muốn khóa");
+            }    
+                
+            
         }
 
-       
 
+        DataTable TCTK;
         private void xemthongtintaikhoan_click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(str))
-            {
-                connection.Open();
-                SqlCommand cmd = new SqlCommand("select * from TaiKhoan", connection);
-                SqlDataReader reader = cmd.ExecuteReader();
-                DataTable dt = new DataTable();
-                dt.Load(reader);
-                dGV_dstaikhoan_AD.DataSource = dt;
-                connection.Close();
-            }
+            string xtctk = "select * from TaiKhoan";
+         
+            TCTK = Functions.GetDataToTable(xtctk);
+            dGV_dstaikhoan_AD.DataSource = TCTK;
+              
         }
     }
 }

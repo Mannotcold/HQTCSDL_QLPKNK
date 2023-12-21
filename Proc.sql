@@ -2,39 +2,39 @@
 -- X? lí ??ng nh?p tài kho?n
 DROP PROCEDURE IF EXISTS Sp_DangNhap;
 
---CREATE PROC Sp_DangNhap
---	@SDT INT,
---	@MatKhau VARCHAR(50),
---	@LoaiTK VARCHAR(50) OUTPUT
---AS
---BEGIN
---	-- Lo?i b? kh?i t?o giá tr?
---	-- SET @LoaiTK = 'NULL'
+CREATE PROC Sp_DangNhap
+	@SDT INT,
+	@MatKhau VARCHAR(50),
+	@LoaiTK VARCHAR(50) OUTPUT
+AS
+BEGIN
+	-- Lo?i b? kh?i t?o giá tr?
+	-- SET @LoaiTK = 'NULL'
 
---	IF NOT EXISTS (SELECT LoaiTK
---				FROM TaiKhoan 
---				WHERE SDT = @SDT 
---				AND MATKHAU = @MatKhau)
---	BEGIN
---		PRINT N'Sai tên ??ng nh?p ho?c m?t kh?u'
---		RETURN 0
---	END
+	IF NOT EXISTS (SELECT LoaiTK
+				FROM TaiKhoan 
+				WHERE SDT = @SDT 
+				AND MATKHAU = @MatKhau)
+	BEGIN
+		PRINT N'Sai tên ??ng nh?p ho?c m?t kh?u'
+		RETURN 0
+	END
 	
---	-- l?y lo?i acc
---	SET @LoaiTK = (SELECT LoaiTK
---				FROM TaiKhoan
---				WHERE  SDT = @SDT 
---				AND MATKHAU = @MatKhau)
+	-- l?y lo?i acc
+	SET @LoaiTK = (SELECT LoaiTK
+				FROM TaiKhoan
+				WHERE  SDT = @SDT 
+				AND MATKHAU = @MatKhau)
 
---	-- x? lí ??ng nh?p
---	if (@LoaiTK IS NOT NULL)
---	BEGIN
---		PRINT N'??ng nh?p thành công'
---		RETURN 1
---	END
---	ELSE RETURN 0	
---END
---GO
+	-- x? lí ??ng nh?p
+	if (@LoaiTK IS NOT NULL)
+	BEGIN
+		PRINT N'??ng nh?p thành công'
+		RETURN 1
+	END
+	ELSE RETURN 0	
+END
+GO
 select * from taikhoan
 
 CREATE PROC SpDangNhap
@@ -138,3 +138,4 @@ EXEC SpDangNhap @SDT, @MatKhau, @LoaiTK OUTPUT, @Ma OUTPUT;
 PRINT 'Lo?i tài kho?n: ' + CAST(@LoaiTK AS NVARCHAR(10));
 PRINT 'Lo?i tài kho?n: ' + CAST(@Ma AS NVARCHAR(10));
 
+select * from TaiKhoan

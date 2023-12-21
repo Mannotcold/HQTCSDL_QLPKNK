@@ -13,40 +13,29 @@ namespace QLPKNK
 {
     public partial class XemHoaDon : Form
     {
-       
 
-        string str = "Data Source=DESKTOP-6IATTTJ;Initial Catalog=DOANHQT;Integrated Security=True";
-        public XemHoaDon()
+        string Ma;
+        
+        public XemHoaDon(string ma)
         {
             InitializeComponent();
+            Ma = ma;
         }
-
+        DataTable TCHD;
+        DataTable THD;
         private void xemtatcahd_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(str) )
-            {
-                connection.Open();
-                SqlCommand cmd = new SqlCommand("select * from CT_HoaDon", connection);
-                SqlDataReader reader= cmd.ExecuteReader();
-                DataTable dt = new DataTable();
-                dt.Load(reader);
-                Bangxemtatcahd.DataSource = dt;
-                connection.Close();
-            }
+            string xtchd = "select * from CT_HoaDon";
+            TCHD = Functions.GetDataToTable(xtchd);
+            Bangxemtatcahd.DataSource = TCHD;
+
         }
 
         private void xemhoadonkh_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(str))
-            {
-                connection.Open();
-                SqlCommand cmd = new SqlCommand("select * from CT_HoaDon where MaHS = '" + mahoso.Text +"'", connection);
-                SqlDataReader reader = cmd.ExecuteReader();
-                DataTable dt = new DataTable();
-                dt.Load(reader);
-                Banghoadonkh.DataSource = dt;
-                connection.Close();
-            }
+            string thd = "select * from CT_HoaDon where MaHS = '" + mahoso.Text + "'";
+            THD = Functions.GetDataToTable(thd);
+            Banghoadonkh.DataSource = THD;
         }
     }
 }

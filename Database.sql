@@ -57,7 +57,7 @@ CREATE TABLE KHACHHANG
   MaNV          INT NOT NULL
 );
 
-
+drop table HoSoBN
 CREATE TABLE HoSoBN
 (
   MaHS          INT IDENTITY(1,1) PRIMARY KEY,
@@ -66,7 +66,7 @@ CREATE TABLE HoSoBN
   MaKH          INT NOT NULL,
   MaNS          INT NOT NULL
 );
-
+drop table Thuoc
 CREATE TABLE Thuoc
 (
   MaThuoc       CHAR(5) NOT NULL,
@@ -112,7 +112,7 @@ CREATE TABLE LichHen
   MaKH          INT NOT NULL,
   MaNS          INT NOT NULL
 );
-
+DROP TABLE DichVu
 
 CREATE TABLE DichVu
 (
@@ -219,6 +219,8 @@ INSERT INTO TaiKhoan (SDT, MatKhau, LoaiTK) VALUES
 
 select * from TaiKhoan
 
+delete  from TaiKhoan
+
 INSERT INTO QuanTri (HoTenQT, NgaySinhQT, DiaChiQT, SDTQT, EmailQT) VALUES
 ('Nguyenhoaiman', '1-1-1999', 'hcm', 012650152, 'MAN2082002@GMAIL.COM')
 
@@ -253,6 +255,10 @@ INSERT INTO HoSoBN ( NgayKham, NguoiKham, MaKH, MaNS) VALUES
 ('05-25-2023', 'KH005',5,3);
 select * from HoSoBN
 
+
+select * from DichVu
+
+SELECT MaDV,TenDV, Loai, Tien FROM DichVu
 
 
 
@@ -319,3 +325,5 @@ INSERT INTO HoaDon ( TenKH, PhiThanhToan) VALUES
 ('Nguyen Van E', 2000000),
 ('Tran Thi L', 1400000),
 ('Le Van M', 380000);
+
+insert into NhanVien(HoTenNV, NgaySinhNV, DiaChiNV, SDTNV, EmailNV) VALUES ('Nguyen Van B', 1900-09-12, 'Ho Chi Minh', 1234567, 'nvb@gmail.com')

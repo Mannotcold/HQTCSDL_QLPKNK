@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLPKNK;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,38 +14,26 @@ namespace nhanvien
 {
     public partial class XemHoSo : Form
     {
-        string str = "Data Source=DESKTOP-6IATTTJ;Initial Catalog=DOANHQT;Integrated Security=True";
-        public XemHoSo()
+        string Ma;
+        public XemHoSo(string ma)
         {
             InitializeComponent();
+            Ma = ma;
         }
-
+        DataTable TCHS;
+        DataTable THS;
         private void xemtatcahs_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(str))
-            {
-                connection.Open();
-                SqlCommand cmd = new SqlCommand("select * from HoSoBN", connection);
-                SqlDataReader reader = cmd.ExecuteReader();
-                DataTable dt = new DataTable();
-                dt.Load(reader);
-                Bangxemtatcahs.DataSource = dt;
-                connection.Close();
-            }
+            string xtchs = "select * from HoSoBN";
+            TCHS = Functions.GetDataToTable(xtchs);
+            Bangxemtatcahs.DataSource = TCHS;
         }
 
         private void xemhosokh_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(str))
-            {
-                connection.Open();
-                SqlCommand cmd = new SqlCommand("select * from HoSoBN where MaKH = '" + makhachhang.Text + "'", connection);
-                SqlDataReader reader = cmd.ExecuteReader();
-                DataTable dt = new DataTable();
-                dt.Load(reader);
-                Bangxemhosokh.DataSource = dt;
-                connection.Close();
-            }
+            string ths = "select * from HoSoBN where MaKH = '" + makhachhang.Text + "'";
+            THS = Functions.GetDataToTable(ths);
+            Bangxemhosokh.DataSource = THS;
         }
     }
 }

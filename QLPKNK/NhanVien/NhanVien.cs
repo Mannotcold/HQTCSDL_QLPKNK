@@ -1,5 +1,5 @@
 ﻿using nhanvien;
-using QLPKNK.KhachHang;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,10 +21,13 @@ namespace QLPKNK
         DataTable table = new DataTable();
 
         string str = "Data Source=DESKTOP-6IATTTJ;Initial Catalog=DOANHQT;Integrated Security=True";
-        public NhanVien()
+        string SĐT;
+        string Ma;
+        public NhanVien(string sdt, string ma)
         {
             InitializeComponent();
-            
+            SĐT = sdt;
+            Ma = ma;
         }
         
         private Form activeform = null;
@@ -43,7 +46,7 @@ namespace QLPKNK
         }
         private void nv4_Click(object sender, EventArgs e)
         {
-            openChildForm(new XemHoaDon());
+            openChildForm(new XemHoaDon(Ma));
         }
 
         private void nv1_Click(object sender, EventArgs e)
@@ -58,7 +61,7 @@ namespace QLPKNK
 
         private void nv3_Click(object sender, EventArgs e)
         {
-            openChildForm(new XemHoSo());
+            openChildForm(new XemHoSo(Ma));
         }
     }
 }
