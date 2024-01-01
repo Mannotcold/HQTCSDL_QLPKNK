@@ -34,7 +34,7 @@ namespace QLPKNK
 
         SqlConnection connection;
         SqlCommand command;
-        string str = "Data Source=DESKTOP-6IATTTJ;Initial Catalog=DOANHQT;Integrated Security=True";
+        string str = "Data Source=.;Initial Catalog=DOANHQT;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
 
