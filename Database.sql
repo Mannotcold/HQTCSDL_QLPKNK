@@ -215,7 +215,7 @@ select * from TaiKhoan
 
 
 INSERT INTO QuanTri (HoTenQT, NgaySinhQT, DiaChiQT, SDTQT, EmailQT) VALUES
-('Nguyenhoaiman', '1-1-1999', 'hcm', 012650152, 'MAN2082002@GMAIL.COM')
+('Nguyenhoaiman', '1-1-1999', 'hcm', 321321321, 'MAN2082002@GMAIL.COM')
 
 select * from QuanTri
 
@@ -320,3 +320,6 @@ INSERT INTO HoaDon ( TenKH, PhiThanhToan) VALUES
 ('Le Van M', 380000);
 
 insert into NhanVien(HoTenNV, NgaySinhNV, DiaChiNV, SDTNV, EmailNV) VALUES ('Nguyen Van B', 1900-09-12, 'Ho Chi Minh', 1234567, 'nvb@gmail.com')
+
+
+select * from HoSoBN WHERE MaHS LIKE '4'

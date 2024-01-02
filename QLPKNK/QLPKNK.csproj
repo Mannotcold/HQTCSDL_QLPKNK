@@ -58,6 +58,12 @@
     <Compile Include="BacSi\AddHoSoBN.Designer.cs">
       <DependentUpon>AddHoSoBN.cs</DependentUpon>
     </Compile>
+    <Compile Include="BacSi\ChiTietHS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BacSi\ChiTietHS.Designer.cs">
+      <DependentUpon>ChiTietHS.cs</DependentUpon>
+    </Compile>
     <Compile Include="DangKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </Compile>
     <EmbeddedResource Include="BacSi\AddHoSoBN.resx">
       <DependentUpon>AddHoSoBN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BacSi\ChiTietHS.resx">
+      <DependentUpon>ChiTietHS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DangKy.resx">
       <DependentUpon>DangKy.cs</DependentUpon>

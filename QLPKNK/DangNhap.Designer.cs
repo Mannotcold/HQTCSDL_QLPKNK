@@ -89,7 +89,7 @@ namespace QLPKNK
             this.txtBox_matkhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBox_matkhau.Location = new System.Drawing.Point(34, 302);
             this.txtBox_matkhau.Name = "txtBox_matkhau";
-            this.txtBox_matkhau.PasswordChar = '\0';
+            this.txtBox_matkhau.PasswordChar = '*';
             this.txtBox_matkhau.PlaceholderText = "Mật khẩu";
             this.txtBox_matkhau.SelectedText = "";
             this.txtBox_matkhau.Size = new System.Drawing.Size(251, 36);

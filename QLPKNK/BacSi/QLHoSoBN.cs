@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using QLPKNK.BacSi;
 namespace QLPKNK
 {
     public partial class QLHoSoBN : Form
@@ -60,7 +60,6 @@ namespace QLPKNK
             {
                 try
                 {
-                    MessageBox.Show(txtmahs.Text, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     Functions.RunSQL("DELETE FROM HoSoBN WHERE MaHS = '" + txtmahs.Text + "'");
 
 
@@ -106,11 +105,9 @@ namespace QLPKNK
             {
                 try
                 {
-                    MessageBox.Show(txtmahs.Text, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                    Functions.RunSQL("select * from HoSoBN WHERE MaHS LIKE '" + txtTuKhoa.Text + "'");
-
-
-
+                    
+                    TT_HSBA = Functions.GetDataToTable("select * from HoSoBN WHERE MaHS LIKE '" + txtTuKhoa.Text + "'");
+                    dgvHSBA.DataSource = TT_HSBA;
                 }
                 catch (Exception)
                 {
@@ -131,6 +128,13 @@ namespace QLPKNK
 
             txtKH.Text = dgvHSBA.Rows[i].Cells[2].Value.ToString();
             txtmans.Text = dgvHSBA.Rows[i].Cells[3].Value.ToString();
+        }
+
+        private void bntChiTiet_Click(object sender, EventArgs e)
+        {
+            Form form = new ChiTietHS(txtmahs.Text);
+
+            form.ShowDialog();
         }
     }
 }

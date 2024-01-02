@@ -33,9 +33,10 @@ namespace QLPKNK
             //Kiểm tra kết nối
             if (connection.State == ConnectionState.Open)
             {
-                MessageBox.Show("Đăng nhập thành công");
+                MessageBox.Show("Đăng nhập thành công! Chào mừng bạn đến với phòng khám nha khoa online", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else MessageBox.Show("Đăng nhập thất bại");
+            else MessageBox.Show("Đăng nhập không thành công! Vui lòng kiểm tra lại tài khoản, mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
 
         }
 
@@ -133,7 +134,62 @@ namespace QLPKNK
             com.Dispose();
             com = null;
         }
-        public static void FillCombo(string sql, ComboBox cbo, string ma) // đổ dữ liệu vào comboBox
+
+        public static void RunSQL2(string sql) // chạy câu lệnh sql
+        {
+
+            SqlCommand com = new SqlCommand();
+            //Lấy dữ liệu về từ kết quả câu lệnh trên
+            //ExecuteReader() dùng với select
+            //ExecuteNonquery(); với inserrt update delete
+            //com.ExecuteNonQuery();
+            com.CommandType = CommandType.StoredProcedure;
+            com.CommandText = sql;
+            com.Connection = connection;
+            //loaddata_PhieuThu();
+            int kq = com.ExecuteNonQuery();
+
+            //Giải phóng bộ nhớ
+            com.Dispose();
+            com = null;
+        }
+
+
+        public static void Sp_UpdateDichVu_2_FIX(string a, string b, string c, string d)
+        {
+            try
+            {
+                using (SqlCommand com = new SqlCommand())
+                {
+                    com.CommandType = CommandType.StoredProcedure;
+                    com.CommandText = "Sp_UpdateDichVu_2_FIX";
+                    com.Connection = connection;
+
+                    // Thêm tham số cho stored procedure
+                    com.Parameters.AddWithValue("@MaDV", a);
+                    com.Parameters.AddWithValue("@TenDV", b);
+                    com.Parameters.AddWithValue("@Loai", c);
+                    com.Parameters.AddWithValue("@Tien", d);
+
+
+                    int result = com.ExecuteNonQuery();
+
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Thực hiện thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thực hiện không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Thực hiện không thành công! Lỗi: {ex.Message}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+        }
+            public static void FillCombo(string sql, ComboBox cbo, string ma) // đổ dữ liệu vào comboBox
         {
             SqlDataAdapter dap = new SqlDataAdapter(sql, connection);
             DataTable table = new DataTable();

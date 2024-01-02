@@ -133,7 +133,7 @@ namespace QLPKNK
             string ngaykham = Datekham.Text;
             string makh = comboBoxKH.Text;
             string sql = "INSERT INTO HoSoBN (NgayKham, NguoiKham, MaKH, MaNS) " +
-               "VALUES ('" + ngaykham.ToString() + "', '" + mans.ToString() + "', '" + makh.ToString() + "' , '" + mans.ToString() + "')";
+               "VALUES ('" + ngaykham.ToString() + "', '" + Ma + "', '" + makh.ToString() + "' , '" + Ma + "')";
             Functions.RunSQL1(sql);
            InsertCT_HOADON();
             loadform();

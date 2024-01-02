@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using QLPKNK;
+using QLPKNK.QuanTri;
+using QLPKNK.KhachHang;
 namespace QLPKNK.QuanTri
 {
     public partial class QLDichVu : Form
@@ -77,6 +79,8 @@ namespace QLPKNK.QuanTri
             }
         }
 
+        
+
         private void btnsua_Click(object sender, EventArgs e)
         {
             DialogResult rs = MessageBox.Show("Bạn có muốn cập nhật hay không", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
@@ -85,9 +89,8 @@ namespace QLPKNK.QuanTri
                 try
                 {
 
-                    Functions.RunSQL("UPDATE DichVu SET TenDV = '" + txttendv.Text + "', LOAI = '" + txtloaidv.Text + "' , TIEN = '" + txttien.Text + "' WHERE MaDV = '" + txtmadv.Text + "'");
-
-
+                    //Functions.RunSQL2("EXEC Sp_UpdateDichVu_2_FIX '"txtmadv.Text"', '{txttendv.Text}', '{txtloaidv.Text}', {txttien.Text}");
+                    Functions.Sp_UpdateDichVu_2_FIX(txtmadv.Text, txttendv.Text, txtloaidv.Text, txttien.Text);
                 }
                 catch (Exception)
                 {
