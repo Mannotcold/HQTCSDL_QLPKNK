@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using QLPKNK;
 using QLPKNK.QuanTri;
+using QLPKNK.KhachHang;
 
 namespace QLPKNK
 {
@@ -179,6 +180,10 @@ namespace QLPKNK
                     //BenhNhan
                 case 3:
                     {
+                        Form Menu = new FormKhachHangChung(txtBox_tendangnhap.Text);
+                        this.Hide();
+                        Menu.ShowDialog();
+                        this.Close();
                         break;
                     }
 

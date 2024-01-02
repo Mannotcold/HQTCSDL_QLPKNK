@@ -77,6 +77,30 @@
     <Compile Include="BacSi\MenuBacSi.Designer.cs">
       <DependentUpon>MenuBacSi.cs</DependentUpon>
     </Compile>
+    <Compile Include="KhachHang\DangKyKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang\DangKyKhachHang.Designer.cs">
+      <DependentUpon>DangKyKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang\DatLichHen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang\DatLichHen.Designer.cs">
+      <DependentUpon>DatLichHen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang\FormKhachHangChung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang\FormKhachHangChung.Designer.cs">
+      <DependentUpon>FormKhachHangChung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang\XemThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang\XemThongTinCaNhan.Designer.cs">
+      <DependentUpon>XemThongTinCaNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanVien\NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +187,18 @@
     <EmbeddedResource Include="BacSi\MenuBacSi.resx">
       <DependentUpon>MenuBacSi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\DangKyKhachHang.resx">
+      <DependentUpon>DangKyKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\DatLichHen.resx">
+      <DependentUpon>DatLichHen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\FormKhachHangChung.resx">
+      <DependentUpon>FormKhachHangChung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\XemThongTinCaNhan.resx">
+      <DependentUpon>XemThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,7 +259,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BenhNhan\" />
     <Folder Include="Image\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

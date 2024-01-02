@@ -205,21 +205,14 @@ GO
 USE DOANHQT
 GO
 
-INSERT INTO TaiKhoan (SDT, MatKhau, LoaiTK) VALUES
-(012650152, '12345', '0'),
-(123456789, '12345', '1'),
-(123456788, '12345', '1'),
-(123456787, '12345', '1'),
-(987654321, '12345', '2'),
-(987654322, '12345', '2'),
-(987654323, '12345', '2'),
-(555555551, '12345', '3'),
-(555555552, '12345', '3'),
-(555555553, '12345', '3')
+INSERT INTO TaiKhoan (SDT, MatKhau, LoaiTK) VALUES 
+(987654321, '12345', '1'),
+(321321321, '12345', '0'),
+(1234567, '12345', '2'),
+(555555551, '12345', '3')
 
 select * from TaiKhoan
 
-delete  from TaiKhoan
 
 INSERT INTO QuanTri (HoTenQT, NgaySinhQT, DiaChiQT, SDTQT, EmailQT) VALUES
 ('Nguyenhoaiman', '1-1-1999', 'hcm', 012650152, 'MAN2082002@GMAIL.COM')
