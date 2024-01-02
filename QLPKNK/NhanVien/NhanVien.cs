@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using QLPKNK.KhachHang;
 namespace QLPKNK
 {
     public partial class NhanVien : Form
@@ -51,12 +51,12 @@ namespace QLPKNK
 
         private void nv1_Click(object sender, EventArgs e)
         {
-            
+            openChildForm(new DatLichHen(SĐT));
         }
 
         private void nv2_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new DangKyKhachHang());
         }
 
         private void nv3_Click(object sender, EventArgs e)

@@ -59,5 +59,10 @@ namespace QLPKNK.KhachHang
                 }
             }
         }
+
+        private void guna2GradientButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
