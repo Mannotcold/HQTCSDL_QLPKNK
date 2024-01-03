@@ -47,12 +47,12 @@ namespace QLPKNK.QuanTri
             // dGV_dstaikhoan_AD
             // 
             this.dGV_dstaikhoan_AD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGV_dstaikhoan_AD.Location = new System.Drawing.Point(356, 404);
-            this.dGV_dstaikhoan_AD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dGV_dstaikhoan_AD.Location = new System.Drawing.Point(114, 325);
+            this.dGV_dstaikhoan_AD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dGV_dstaikhoan_AD.Name = "dGV_dstaikhoan_AD";
             this.dGV_dstaikhoan_AD.RowHeadersWidth = 51;
             this.dGV_dstaikhoan_AD.RowTemplate.Height = 24;
-            this.dGV_dstaikhoan_AD.Size = new System.Drawing.Size(522, 180);
+            this.dGV_dstaikhoan_AD.Size = new System.Drawing.Size(731, 149);
             this.dGV_dstaikhoan_AD.TabIndex = 7;
             this.dGV_dstaikhoan_AD.Click += new System.EventHandler(this.xemthongtintaikhoan_click);
             // 
@@ -72,13 +72,13 @@ namespace QLPKNK.QuanTri
             this.txtBox_matkhau_DSTK.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_matkhau_DSTK.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtBox_matkhau_DSTK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBox_matkhau_DSTK.Location = new System.Drawing.Point(366, 192);
-            this.txtBox_matkhau_DSTK.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtBox_matkhau_DSTK.Location = new System.Drawing.Point(274, 156);
+            this.txtBox_matkhau_DSTK.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtBox_matkhau_DSTK.Name = "txtBox_matkhau_DSTK";
             this.txtBox_matkhau_DSTK.PasswordChar = '\0';
             this.txtBox_matkhau_DSTK.PlaceholderText = "";
             this.txtBox_matkhau_DSTK.SelectedText = "";
-            this.txtBox_matkhau_DSTK.Size = new System.Drawing.Size(295, 31);
+            this.txtBox_matkhau_DSTK.Size = new System.Drawing.Size(221, 25);
             this.txtBox_matkhau_DSTK.TabIndex = 55;
             // 
             // txtBox_tendangnhap_DSTK
@@ -97,13 +97,13 @@ namespace QLPKNK.QuanTri
             this.txtBox_tendangnhap_DSTK.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_tendangnhap_DSTK.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtBox_tendangnhap_DSTK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBox_tendangnhap_DSTK.Location = new System.Drawing.Point(366, 102);
-            this.txtBox_tendangnhap_DSTK.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtBox_tendangnhap_DSTK.Location = new System.Drawing.Point(274, 83);
+            this.txtBox_tendangnhap_DSTK.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtBox_tendangnhap_DSTK.Name = "txtBox_tendangnhap_DSTK";
             this.txtBox_tendangnhap_DSTK.PasswordChar = '\0';
             this.txtBox_tendangnhap_DSTK.PlaceholderText = "";
             this.txtBox_tendangnhap_DSTK.SelectedText = "";
-            this.txtBox_tendangnhap_DSTK.Size = new System.Drawing.Size(295, 31);
+            this.txtBox_tendangnhap_DSTK.Size = new System.Drawing.Size(221, 25);
             this.txtBox_tendangnhap_DSTK.TabIndex = 54;
             // 
             // label4
@@ -111,9 +111,10 @@ namespace QLPKNK.QuanTri
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(146, 282);
+            this.label4.Location = new System.Drawing.Point(110, 229);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 28);
+            this.label4.Size = new System.Drawing.Size(107, 21);
             this.label4.TabIndex = 12;
             this.label4.Text = "Loại tài khoản";
             // 
@@ -122,9 +123,10 @@ namespace QLPKNK.QuanTri
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(146, 102);
+            this.label3.Location = new System.Drawing.Point(110, 83);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 28);
+            this.label3.Size = new System.Drawing.Size(111, 21);
             this.label3.TabIndex = 10;
             this.label3.Text = "Tên đăng nhập";
             // 
@@ -133,9 +135,10 @@ namespace QLPKNK.QuanTri
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(186, 195);
+            this.label2.Location = new System.Drawing.Point(140, 158);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 28);
+            this.label2.Size = new System.Drawing.Size(75, 21);
             this.label2.TabIndex = 8;
             this.label2.Text = "Mật khẩu";
             // 
@@ -153,10 +156,9 @@ namespace QLPKNK.QuanTri
             this.khoatk_qt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.khoatk_qt.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.khoatk_qt.ForeColor = System.Drawing.Color.Black;
-            this.khoatk_qt.Location = new System.Drawing.Point(981, 646);
-            this.khoatk_qt.Margin = new System.Windows.Forms.Padding(4);
+            this.khoatk_qt.Location = new System.Drawing.Point(736, 525);
             this.khoatk_qt.Name = "khoatk_qt";
-            this.khoatk_qt.Size = new System.Drawing.Size(145, 51);
+            this.khoatk_qt.Size = new System.Drawing.Size(109, 41);
             this.khoatk_qt.TabIndex = 84;
             this.khoatk_qt.Text = "Khoá";
             this.khoatk_qt.Click += new System.EventHandler(this.khoatk_qt_Click);
@@ -175,10 +177,9 @@ namespace QLPKNK.QuanTri
             this.capnhattk_qt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.capnhattk_qt.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.capnhattk_qt.ForeColor = System.Drawing.Color.Black;
-            this.capnhattk_qt.Location = new System.Drawing.Point(417, 646);
-            this.capnhattk_qt.Margin = new System.Windows.Forms.Padding(4);
+            this.capnhattk_qt.Location = new System.Drawing.Point(313, 525);
             this.capnhattk_qt.Name = "capnhattk_qt";
-            this.capnhattk_qt.Size = new System.Drawing.Size(145, 51);
+            this.capnhattk_qt.Size = new System.Drawing.Size(109, 41);
             this.capnhattk_qt.TabIndex = 83;
             this.capnhattk_qt.Text = "Cập Nhật";
             this.capnhattk_qt.Click += new System.EventHandler(this.capnhattk_qt_Click);
@@ -197,10 +198,9 @@ namespace QLPKNK.QuanTri
             this.themtk_qt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.themtk_qt.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.themtk_qt.ForeColor = System.Drawing.Color.Black;
-            this.themtk_qt.Location = new System.Drawing.Point(172, 646);
-            this.themtk_qt.Margin = new System.Windows.Forms.Padding(4);
+            this.themtk_qt.Location = new System.Drawing.Point(129, 525);
             this.themtk_qt.Name = "themtk_qt";
-            this.themtk_qt.Size = new System.Drawing.Size(145, 51);
+            this.themtk_qt.Size = new System.Drawing.Size(109, 41);
             this.themtk_qt.TabIndex = 82;
             this.themtk_qt.Text = "Thêm";
             this.themtk_qt.Click += new System.EventHandler(this.themtk_qt_Click);
@@ -219,10 +219,9 @@ namespace QLPKNK.QuanTri
             this.xoatk_qt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.xoatk_qt.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.xoatk_qt.ForeColor = System.Drawing.Color.Black;
-            this.xoatk_qt.Location = new System.Drawing.Point(706, 646);
-            this.xoatk_qt.Margin = new System.Windows.Forms.Padding(4);
+            this.xoatk_qt.Location = new System.Drawing.Point(530, 525);
             this.xoatk_qt.Name = "xoatk_qt";
-            this.xoatk_qt.Size = new System.Drawing.Size(145, 51);
+            this.xoatk_qt.Size = new System.Drawing.Size(109, 41);
             this.xoatk_qt.TabIndex = 81;
             this.xoatk_qt.Text = "Xoá";
             this.xoatk_qt.Click += new System.EventHandler(this.xoatk_qt_Click);
@@ -242,9 +241,10 @@ namespace QLPKNK.QuanTri
             "1",
             "2",
             "3"});
-            this.ComboBox1.Location = new System.Drawing.Point(366, 282);
+            this.ComboBox1.Location = new System.Drawing.Point(274, 229);
+            this.ComboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ComboBox1.Name = "ComboBox1";
-            this.ComboBox1.Size = new System.Drawing.Size(295, 36);
+            this.ComboBox1.Size = new System.Drawing.Size(222, 36);
             this.ComboBox1.TabIndex = 57;
             // 
             // label1
@@ -252,18 +252,19 @@ namespace QLPKNK.QuanTri
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(463, 9);
+            this.label1.Location = new System.Drawing.Point(347, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(369, 41);
+            this.label1.Size = new System.Drawing.Size(297, 32);
             this.label1.TabIndex = 85;
             this.label1.Text = "DANH SÁCH TÀI KHOẢN";
             // 
             // QuanLyTaiKhoan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.ClientSize = new System.Drawing.Size(1301, 753);
+            this.ClientSize = new System.Drawing.Size(976, 612);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ComboBox1);
             this.Controls.Add(this.themtk_qt);
@@ -276,7 +277,6 @@ namespace QLPKNK.QuanTri
             this.Controls.Add(this.xoatk_qt);
             this.Controls.Add(this.dGV_dstaikhoan_AD);
             this.Controls.Add(this.capnhattk_qt);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QuanLyTaiKhoan";
             this.Text = "QuanLyTaiKhoan";
             ((System.ComponentModel.ISupportInitialize)(this.dGV_dstaikhoan_AD)).EndInit();

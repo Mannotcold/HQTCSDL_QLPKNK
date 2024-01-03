@@ -77,5 +77,13 @@ namespace QLPKNK.QuanTri
         {
             openChildForm(new QuanLyTaiKhoan(Ma));
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Form form = new DangNhap();
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
+        }
     }
 }
