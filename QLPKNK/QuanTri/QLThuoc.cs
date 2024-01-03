@@ -64,7 +64,7 @@ namespace QLPKNK.QuanTri
 
 
                    Functions.RunSQL(sql);
-
+                    Load_form();
 
                 }
                 catch (Exception)
@@ -88,6 +88,7 @@ namespace QLPKNK.QuanTri
                "    SLTonKho = '" + txtsl.Text + "', NgayHetHan = '" + Datehh.Text + "', Tien = '" + txttien.Text + "' " +
                "WHERE MaThuoc = '" + txtmadv.Text + "'";
                     Functions.RunSQL(sql);
+                    Load_form();
                 }
                 catch (Exception)
                 {
@@ -106,7 +107,7 @@ namespace QLPKNK.QuanTri
                 try
                 {
                     Functions.RunSQL("DELETE FROM THUOC WHERE MaTHUOC ='" + txtmadv.Text + "'");
-
+                    Load_form();
 
 
                 }

@@ -22,14 +22,21 @@ namespace QLPKNK
 
 
         DataTable TT_HSBA;
-        private void QLHoSoBN_Load(object sender, EventArgs e)
+
+        private void LoadForm()
         {
-            
-            
             string sql = "SELECT MaHS, NgayKham,MaKH,MaNS FROM HoSoBN WHERE MaNS = '" + Ma + "' ";
             TT_HSBA = Functions.GetDataToTable(sql);
             dgvHSBA.DataSource = TT_HSBA;
-            
+        }
+
+        private void QLHoSoBN_Load(object sender, EventArgs e)
+        {
+            LoadForm();
+
+
+
+
         }
 
 
@@ -61,7 +68,7 @@ namespace QLPKNK
                 try
                 {
                     Functions.RunSQL("DELETE FROM HoSoBN WHERE MaHS = '" + txtmahs.Text + "'");
-
+                    LoadForm();
 
 
                 }

@@ -20,11 +20,16 @@ namespace QLPKNK.QuanTri
         }
 
         DataTable TT;
-        private void guna2Panel3_Paint(object sender, PaintEventArgs e)
+
+        private void LoadForm()
         {
             string sql1 = "SELECT MaDV,TenDV, Loai, Tien FROM DichVu  ";
             TT = Functions.GetDataToTable(sql1);
             dgvHSBA.DataSource = TT;
+        }
+        private void guna2Panel3_Paint(object sender, PaintEventArgs e)
+        {
+            LoadForm();
         }
         private void dgvHSBA_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -48,7 +53,7 @@ namespace QLPKNK.QuanTri
                "VALUES (MaDV = '" + txtmadv.Text + "',TenDV = '" + txttendv.Text + "', LOAI = '" + txtloaidv.Text + "' , TIEN = '" + txttien.Text + "')";
 
                     Functions.RunSQL(sql);
-
+                    LoadForm();
 
                 }
                 catch (Exception)
@@ -67,7 +72,7 @@ namespace QLPKNK.QuanTri
                 try
                 {
                     Functions.RunSQL("DELETE FROM DichVu WHERE MaDV = '" + txtmadv.Text + "'");
-
+                    LoadForm();
 
 
                 }
@@ -91,6 +96,7 @@ namespace QLPKNK.QuanTri
 
                     //Functions.RunSQL2("EXEC Sp_UpdateDichVu_2_FIX '"txtmadv.Text"', '{txttendv.Text}', '{txtloaidv.Text}', {txttien.Text}");
                     Functions.Sp_UpdateDichVu_2_FIX(txtmadv.Text, txttendv.Text, txtloaidv.Text, txttien.Text);
+                    LoadForm();
                 }
                 catch (Exception)
                 {

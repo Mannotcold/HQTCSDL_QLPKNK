@@ -22,12 +22,15 @@ namespace QLPKNK
         }
         DataTable TT_QLLichHen;
 
-
-        private void QLLichHenCaNhan_Load(object sender, EventArgs e)
+        private void LoadForm()
         {
             string sql = "SELECT * FROM LichCaNhanNS WHERE MaNS = '" + Ma + "'";
             TT_QLLichHen = Functions.GetDataToTable(sql);
             dgvLHCN.DataSource = TT_QLLichHen;
+        }
+        private void QLLichHenCaNhan_Load(object sender, EventArgs e)
+        {
+            LoadForm();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -38,7 +41,7 @@ namespace QLPKNK
                 try
                 {
                     Functions.RunSQL(" INSERT INTO LichCaNhanNS(Ngay, ThoiGian, MaNS) VALUES ('" + Datekham.Text + "', '" + TimeKham.Text + "', '" + Ma + "')");
-
+                    LoadForm();
 
                 }
                 catch (Exception)
@@ -67,7 +70,7 @@ namespace QLPKNK
                 {
 
                     Functions.RunSQL("UPDATE LichCaNhanNS SET Ngay = '" + Datekham.Text + "', ThoiGian = '" + TimeKham.Text + "' WHERE MaLichCaNhan = '" + malh + "'");
-
+                    LoadForm();
 
                 }
                 catch (Exception)
@@ -87,7 +90,7 @@ namespace QLPKNK
                 {
 
                     Functions.RunSQL("DELETE FROM LichCaNhanNS WHERE MaLichCaNhan = '" + malh + "'");
-
+                    LoadForm();
 
                 }
                 catch (Exception)
