@@ -135,24 +135,7 @@ namespace QLPKNK
             com = null;
         }
 
-        public static void RunSQL2(string sql) // chạy câu lệnh sql
-        {
-
-            SqlCommand com = new SqlCommand();
-            //Lấy dữ liệu về từ kết quả câu lệnh trên
-            //ExecuteReader() dùng với select
-            //ExecuteNonquery(); với inserrt update delete
-            //com.ExecuteNonQuery();
-            com.CommandType = CommandType.StoredProcedure;
-            com.CommandText = sql;
-            com.Connection = connection;
-            //loaddata_PhieuThu();
-            int kq = com.ExecuteNonQuery();
-
-            //Giải phóng bộ nhớ
-            com.Dispose();
-            com = null;
-        }
+        
 
 
         public static void Sp_UpdateDichVu_2_FIX(string a, string b, string c, string d)
@@ -189,6 +172,8 @@ namespace QLPKNK
                 MessageBox.Show($"Thực hiện không thành công! Lỗi: {ex.Message}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
+
+
             public static void FillCombo(string sql, ComboBox cbo, string ma) // đổ dữ liệu vào comboBox
         {
             SqlDataAdapter dap = new SqlDataAdapter(sql, connection);
